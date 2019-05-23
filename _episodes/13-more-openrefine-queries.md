@@ -1,5 +1,5 @@
 ---
-title: "Advanced OpenRefine functions"
+title: "More APIs Queries in OpenRefine"
 teaching: 20
 exercises: 10
 questions:
