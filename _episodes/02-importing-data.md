@@ -6,7 +6,7 @@ questions:
 - "How do I read data types like JSON & XML?"
 objectives:
 - "Understand commmon types of structured data"
-- "Understand concepts realted to APIs
+- "Understand concepts realted to APIs"
 keypoints:
 - "How to read structured data types: JSON & XML"
 - "What are parameters"
