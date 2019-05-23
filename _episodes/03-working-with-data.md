@@ -24,7 +24,7 @@ keypoints:
 
 ### Orbis
 
-**[orbis.library.yale.edu/vwebv/searchResults?searchId=5870&recPointer=0&recCount=50](orbis.library.yale.edu/vwebv/searchResults?searchId=5870&recPointer=0&recCount=50)**
+**[https://orbis.library.yale.edu/vwebv/searchResults?searchArg=python&searchCode=GKEY&searchType=0&recCount=10](https://orbis.library.yale.edu/vwebv/search?searchArg=python&searchCode=GKEY%5E*&searchType=0&recCount=10)**
 ![Orbis url](../assets/img/orbisAPI.png)
 
 ## Reading Documentation
@@ -65,7 +65,6 @@ Look up courses in **English Language and Literature** for **the fall term of 20
 
 ![Yale course URL](../assets/img/YaleCourseFull.png)
 
-![Test question](../assets/img/YaleCourseBase.png)
 
 >## Write your own Query
 >
@@ -73,3 +72,5 @@ Look up courses in **English Language and Literature** for **the fall term of 20
 >2. Use Yale Courses API documentation to create your own query
 >3. Record your query in the etherpad. We’ll test your queries together!
 {: .checklist}
+![Test question](../assets/img/YaleCourseBase.png)
+
