@@ -69,5 +69,5 @@ keypoints:
 }
 ```
 
-![Sample JSON data](images/Slide06.png)
+![Sample JSON data](../assets/img/Slide06.png)
 

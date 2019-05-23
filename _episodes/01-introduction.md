@@ -51,10 +51,10 @@ keypoints:
 
 ## How APIs work
 
-![Illustration of APIs as a Barista: https://www.handsonconnect.org/blog/2016/8/17/whatapi-and-whySource:-should-i-care-is-an-9](assets/img/HowAPIWorks.png)
+![Illustration of APIs as a Barista: https://www.handsonconnect.org/blog/2016/8/17/whatapi-and-whySource:-should-i-care-is-an-9](../assets/img/HowAPIWorks.png)
 
 
 ## How APIs work
 
-![How APIs work in realtion to a web-server: http://www.stepin-solutions.com/blog/api-programming-backbone-of-mobile-app-development/](/assets/img/APIServer.png)
+![How APIs work in realtion to a web-server: http://www.stepin-solutions.com/blog/api-programming-backbone-of-mobile-app-development/](../assets/img/APIServer.png)
 

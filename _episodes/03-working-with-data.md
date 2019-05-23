@@ -20,12 +20,12 @@ keypoints:
 ### YouTube
 
  **[https://www.youtube.com/watch?v=s7wmiS2mSXY&t=1m45s](https://www.youtube.com/watch?v=s7wmiS2mSXY&t=1m45s)**
-![youtube URL](images/youtubeAPI.png)
+![youtube URL](../assets/img/youtubeAPI.png)
 
 ### Orbis
 
 **[orbis.library.yale.edu/vwebv/searchResults?searchId=5870&recPointer=0&recCount=50](orbis.library.yale.edu/vwebv/searchResults?searchId=5870&recPointer=0&recCount=50)**
-![Orbis url](images/orbisAPI.png)
+![Orbis url](../assets/img/orbisAPI.png)
 
 ## Reading Documentation
 
@@ -63,9 +63,9 @@ keypoints:
 
 Look up courses in **English Language and Literature** for **the fall term of 2017** :
 
-![Yale course URL](images/YaleCourseFull.png)
+![Yale course URL](../assets/img/YaleCourseFull.png)
 
-![Test question](images/YaleCourseBase.png)
+![Test question](../assets/img/YaleCourseBase.png)
 
 >## Write your own Query
 >
