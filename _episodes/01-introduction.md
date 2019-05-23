@@ -1,66 +1,60 @@
 ---
-title: "Introduction to OpenRefine"
+title: "Introduction to APIs"
 teaching: 15
 exercises: 0
 questions:
-- "What is OpenRefine? What can it do?"
+- "What are APIs? What can they do?"
 objectives:
-- "Explain what the OpenRefine software does"
-- "Explain how the OpenRefine software can help work with data files"
+- "Explain how an API functions"
+- "Explain common API types"
 keypoints:
-- "OpenRefine is 'a tool for working with messy data'"
-- "OpenRefine works best with data in a simple tabular format"
-- "OpenRefine can help you split data up into more granular parts"
-- "OpenRefine can help you match local data up to other data sets"
-- "OpenRefine can help you enhance a data set with data from other sources"
+- "APIs are used all over the web'"
+- "APIs alllow applications to request data from web servers"
+- "There are several types of APIs"
+- "APIs can act as a 'middle-man' between you and data"
+- "APIs can help gather bulk data & metadata from library services"
 ---
 
-## What is OpenRefine?
-OpenRefine is described as "a power tool for working with messy data" [David Huynh](http://web.archive.org/web/20141021040915/http://davidhuynh.net/spaces/nicar2011/tutorial.pdf) - but what does this mean? It is probably easiest to describe the kinds of data OpenRefine is good at working with and the sorts of problems it can help you solve.
+## Vocabulary
 
-OpenRefine is most useful where you have data in a simple tabular format such as a spreadsheet, a comma separated values file (csv) or a tab delimited file (tsv) but with internal inconsistencies either in data formats, or where data appears, or in terminology used. OpenRefine can be used to standardize and clean data across your file. It can help you:
+- **API** – Application Programming Interface
+    - A set of clearly defined methods of communication between various software
+       components. (https://en.wikipedia.org/wiki/Application_programming_interface)
+- **REST** – REepresentational State Transfer
+    - _A data-driven architecture for web services reliant on HTTP_
+       - **GET** – Requests data to be returned from an online source
+       - **POST** – Requests data to be submitted to an online source
+- **OAuth** – Open Authorization Standard
 
-* Get an overview of a data set
-* Resolve inconsistencies in a data set, for example standardizing date formatting
-* Help you split data up into more granular parts, for example splitting up cells with multiple authors into separate cells
-* Match local data up to other data sets, for example in matching local subjects against the Library of Congress Subject Headings
-* Enhance a data set with data from other sources
+## What is an API?
 
-Some common scenarios might be:
+- Web Applications 
+    - Kayak or Expedia
 
-* Where you want to know how many times a particular value (name, publisher, subject) appears in a column in your data
-* Where you want to know how values are distributed across your whole data set
-* Where you have a list of dates which are formatted in different ways, and want to change all the dates in the list to a single common date format. For example:
+![Graphic showing Kayak.com](images/kayak.png)
 
-| Data you have   | Desired data |
-|-----------------|:-------------|
-| 1st January 2014| 2014-01-01   |
-| 01/01/2014      | 2014-01-01   |
-| Jan 1 2014      | 2014-01-01   |
-| 2014-01-01      | 2014-01-01   |
+## Library-related APIs
 
-* Where you have a list of names or terms that differ from each other but refer to the same people, places or concepts. For example:
+- HathiTrust
+    - Bibliographic API: [https://www.hathitrust.org/bib_api](https://www.hathitrust.org/bib_api)
+    - Data API: [ttps://www.hathitrust.org/data_api](https://www.hathitrust.org/data_api)
+- Springer or BioMedCentral
+    - 4 APIs: [Sttps://dev.springer.com/](https://dev.springer.com/)
+- OCLC
+    - 22 APIs: [https://www.oclc.org/developer/develop/web-services.en.html](https://www.oclc.org/developer/develop/web-services.en.html)
+    - Includes ‘Search’, ‘Metadata’, and ‘VIAF’ APIs
+- Voyager API
+    - 2 APIs (VoyagerSearch, VoyagerUpdate)
+    - Developed by YUL Library IT (Yue Ji)
+    - Actively used by Preservation Department for their project and workflow
 
-| Data you have   | Desired data |
-|-----------------|:-------------|
-| London          | London       |
-| London]         | London       |
-| London,]        | London       |
-| london          | London       |
 
-* Where you have several bits of data combined together in a single column, and you want to separate them out into individual bits of data with one column for each bit of the data. For example going from a single address field (in the first column), to each part of the address in a separate field:
+## How APIs work
 
-| Address in single field | Institution  | Library name  | Address 1 | Address 2 | Town/City | Region | Country | Postcode |
-|-------------------------|:-------------|:-------------|:-------------|:-------------|:-------------|:-------------|:-------------|:-------------|
-| University of Wales, Llyfrgell Thomas Parry Library, Llanbadarn Fawr, ABERYSTWYTH, Ceredigion, SY23 3AS, United Kingdom | University of Wales | Llyfrgell Thomas Parry Library | Llanbadarn Fawr | | Aberystwyth | Ceredigion | United Kingdom | SY23 3AS |
-| University of Aberdeen, Queen Mother Library, Meston Walk, ABERDEEN, AB24 3UE, United Kingdom | University of Abderdeen | Queen Mother Library | Meston Walk | | Aberdeen | | United Kingdom | AB24 3UE |
-| University of Birmingham, Barnes Library, Medical School, Edgbaston, BIRMINGHAM, West Midlands, B15 2TT, United Kingdom | University of Birmingham | Barnes Library | Medical School | Edgbaston | Birmingham | West Midlands | United Kingdom | B15 2TT |
-| University of Warwick, Library, Gibbett Hill Road, COVENTRY, CV4 7AL, United Kingdom | University of Warwick | Library | Gibbett Hill Road | | Coventry | | United Kingdom | CV4 7AL |
+![Illustration of APIs as a Barista: https://www.handsonconnect.org/blog/2016/8/17/whatapi-and-whySource:-should-i-care-is-an-9](images/HowAPIWorks.png)
 
-* Where you want to add to your data from an external data source:
 
-| Data you have   | Date of Birth from VIAF (Virtual International Authority File) | Date of Death from VIAF (Virtual International Authority File) |
-|-----------------|:-------------|:-------------|
-| Braddon, M. E. (Mary Elizabeth) | 1835 | 1915 |
-| Rossetti, William Michael       | 1829 | 1919 |
-| Prest, Thomas Peckett           | 1810 | 1879 |
+## How APIs work
+
+![How APIs work in realtion to a web-server: http://www.stepin-solutions.com/blog/api-programming-backbone-of-mobile-app-development/](images/APIServer.png)
+
