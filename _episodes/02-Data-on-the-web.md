@@ -9,7 +9,8 @@ objectives:
 - "Understand concepts realted to APIs"
 keypoints:
 - "How to read structured data types: JSON & XML"
-- "What are parameters"
+- "What are parameters?"
+- "What are appropriate uses of data retrieved via API?"
 ---
 
 ## Data Formats
@@ -36,7 +37,9 @@ keypoints:
     “key3.2”: “value”
 }
           }
- ```
+```
+
+### JSON
     - Many types of data can be stored in JSON
 ```
 {
@@ -71,3 +74,6 @@ keypoints:
 
 ![Sample JSON data](../assets/img/Slide06.png)
 
+### XML
+
+## Appropriate Use
