@@ -1,31 +1,44 @@
 # Library Carpentry
 
-The Library Carpentry module '[OpenRefine for Librarians](https://librarycarpentry.github.io/lc-open-refine/)' is maintained by [Owen Stephens](https://github.com/ostephens), [Juliane Schneider](https://github.com/pitviper6), [Paul Pival](https://github.com/ppival), [Kristin Lee](https://github.com/kristindawn), *[Erin Carrillo](https://github.com/partiecolored)* and [Carmi Cronje](https://github.com/ccronje).
+This workshop material '[APIs for Libraries](https://joshuadull.github.io/APIs-for-Libraries/)' was developed by [Joshua Dull](https://github.com/joshuadull), [David Cirella](https://github.com/decirella), and [Sawyer Newman](https://github.com/sauuyer). Thanks to Kate Nyhan, *[Yukari Sugiyama](https://github.com/ysugiyama3)* and Kayleigh Bohemier for additional contributions.
 
-## Background
+## License
 
-Library Carpentry is a software skills training programme aimed at library and information professions. It builds on the work of [Software Carpentry](http://software-carpentry.org/) and [Data Carpentry](http://www.datacarpentry.org/).
+### Instructional Material
 
-Library Carpentry is in the commons and for the commons. It is not tied to any institution of person. For more information on Library Carpentry, see our website [librarycarpentry.github.io](http://librarycarpentry.github.io/).
+This instructional material is
+made available under the [Creative Commons Attribution
+license][cc-by-human]. The following is a human-readable summary of
+(and not a substitute for) the [full legal text of the CC BY 4.0
+license][cc-by-legal].
 
-## Contribution
+You are free:
 
-There are many ways of contributing to Library Carpentry:
+* to **Share**---copy and redistribute the material in any medium or format
+* to **Adapt**---remix, transform, and build upon the material
 
-- Join our [Gitter discussion forum](https://gitter.im/LibraryCarpentry/).
-- Follow updates on [Twitter](https://twitter.com/LibCarpentry).
-- Make a suggestion or correct an error by [raising an Issue](https://github.com/LibraryCarpentry/lc-open-refine/issues).
+for any purpose, even commercially.
 
-## Code of Conduct
+The licensor cannot revoke these freedoms as long as you follow the
+license terms.
 
-All participants should agree to abide by the [Software Carpentry Code of Conduct](http://software-carpentry.org/conduct/).
+Under the following terms:
 
-## Authors
+* **Attribution**---You must give appropriate credit to the contirbutors, provide a [link to the
+  license][cc-by-human], and indicate if changes were made. You may do
+  so in any reasonable manner, but not in any way that suggests the
+  licensor endorses you or your use.
 
-Library Carpentry is authored and maintained by the [community](https://github.com/orgs/LibraryCarpentry/people).
+**No additional restrictions**---You may not apply legal terms or
+technological measures that legally restrict others from doing
+anything the license permits.  With the understanding that:
 
-## Citation
+Notices:
 
-Please cite as:
-
-Library Carpentry. OpenRefine for Librarians. June 2016. https://librarycarpentry.github.io/lc-open-refine/.
+* You do not have to comply with the license for elements of the
+  material in the public domain or where your use is permitted by an
+  applicable exception or limitation.
+* No warranties are given. The license may not give you all of the
+  permissions necessary for your intended use. For example, other
+  rights such as publicity, privacy, or moral rights may limit how you
+  use the material.
