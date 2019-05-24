@@ -115,13 +115,21 @@ $codeblock-padding: 5px !default;
 .testimonial{ @include bkSetup($color-testimonial, "\e143"); }
 
 .callout h3,
-.challenge h3,
+.challenge h3 {
+  color: #ffffff;
+}
 .checklist h3,
 .discussion h3,
-.keypoints h3,
-.objectives h3,
+.keypoints h3 {
+  color: #ffffff;
+}
+.objectives h3 {
+  color: #ffffff;
+}
 .prereq h3,
-.solution h3,
+.solution h3{
+  color: #ffffff;
+}
 .testimonial h3 {
 font-size: 18px;
 }
