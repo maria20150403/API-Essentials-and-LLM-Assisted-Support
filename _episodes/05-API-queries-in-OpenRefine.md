@@ -31,7 +31,7 @@ We will be using the data in File1.xlsx. The column named 'ISBN' contains ISBN n
 >6. Click 'OK'
 {: .checklist}
 
-![Screenshot of Voyager API query](../assest/img/VoyagerFetch.png)
+![Screenshot of Voyager API query](../assets/img/VoyagerFetch.png)
 
 ## Parse JSON results
 
@@ -61,15 +61,15 @@ Our Voyager API query returns results in JSON format as a single cell in our exc
 >1. What are the steps to create a new column with the location of the first item?
 >2. What are the steps to create a new column called 'HandleLink' which is a link to the catalog record for that item? (hint: "http://hdl.handle.net/10079/bibid/" + ?)
 >
->## Solution
+>>## Solution
 >>1. Select 'VoyagerData' -> 'Edit column' -> 'Add column based on this column...'
->>	- New column name: 'Location'
->>	- Add the expression: 'value.parseJson().record[0].item[0].loccode'
->>	- Click 'OK'
+>>- New column name: 'Location'
+>>- Add the expression: 'value.parseJson().record[0].item[0].loccode'
+>>- Click 'OK'
 >>2. Select 'VoyagerData' -> 'Edit column' -> 'Add column based on this column...'
->>	- New column name: 'HandleLink'
->>	- Add the expression: '"http://hdl.handle.net/10079/bibid/" + value.parseJson().record[0].bibid'
->>	- Click 'OK'	 
+>>- New column name: 'HandleLink'
+>>- Add the expression: '"http://hdl.handle.net/10079/bibid/" + value.parseJson().record[0].bibid'
+>>- Click 'OK'	 
 >{: .solution}
 {: .challenge}
 
