@@ -24,6 +24,10 @@ keypoints:
     - _A data-driven architecture for web services reliant on HTTP_
        - **GET** – Requests data to be returned from an online source
        - **POST** – Requests data to be submitted to an online source
+- **SOAP–Simple** - Object Access Protocol
+    - _A protocol relying on XML structure to for requests & responses_
+      - Send request XML using terms specific to SOAP•Response sent in XML format
+      - Can use any transport protocol, not just http
 - **OAuth** – Open Authorization Standard
 
 ## What is an API?

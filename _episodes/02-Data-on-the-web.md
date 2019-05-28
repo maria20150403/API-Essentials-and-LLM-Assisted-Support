@@ -16,6 +16,7 @@ keypoints:
 ## Data Formats
 
 - **JSON** – JavaScript Object Notation
+  - Plain text, can open n any text editor or web browser
 - **XML** – eXtensible Markup Language
 
 
@@ -40,7 +41,8 @@ keypoints:
 ```
 
 ### JSON
-    - Many types of data can be stored in JSON
+- Many types of data can be stored in JSON
+
 ```
 {
 "firstName" : "John",
@@ -71,6 +73,8 @@ keypoints:
 "spouse" : null
 }
 ```
+
+Here's the same data with the Key/Value pairs labled:
 
 ![Sample JSON data](../assets/img/Slide06.png)
 
