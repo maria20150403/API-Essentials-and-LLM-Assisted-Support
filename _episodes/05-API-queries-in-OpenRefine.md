@@ -41,10 +41,10 @@ Our Voyager API query returns results in JSON format as a single cell in our exc
 - We often encounter data organized in an array or list, signified by square brackets: []
 	- To access an item in an array, we use the index number starting at zero (0)
 	- In the following screenshot, we have an array a books with the key "items"
-	- To get the value of 'Book1', we use 'item[0]' where zero is the index for the first item
-	- To get 'Book2' we would use 'item[1]', 'Book3' is 'item[2]', and so on...
+	- To get the value of 'Book1', we use 'item[0].title' where zero is the index for the first item & "title" is the key for the value we want to extract.
+	- To get 'Book2' we would use 'item[1].title', 'Book3' is 'item[2].title', and so on...
 
-![Screenshot of a sample JSON file]()
+![Screenshot of a sample JSON file](../assets/img/jsonSample.png)
 
 
 >## Let's find the Call Number
@@ -78,7 +78,7 @@ Our Voyager API query returns results in JSON format as a single cell in our exc
 >Let's work with an array of data in JSON. We will find the status of each item in the record and save those values in a new column.
 >1. Select 'VoyagerData' -> 'Edit column' -> 'Add column based on this column...'
 >2. New column name: 'ItemStatus'
->3. Add the expression: 'forEach(value.parseJson().record[0].items,v,v.itemstatus).join(" | ")'
+>3. Add the expression: 'forEach(value.parseJson().record[0].items,v,v.itemstatus).join(" \| ")'
 >4. Click 'OK'. We should have a new column in our data with an array of values.
 {: .checklist}
 
