@@ -79,5 +79,11 @@ Here's the same data with the Key/Value pairs labled:
 ![Sample JSON data](../assets/img/Slide06.png)
 
 ### XML
+- Like JSON, many different types of data can be stored in XML
+
+Again, here is the same data as above, but in XML format.
+
+![Sample XML data](../assets/img/XML.jpg)
+
 
 ## Appropriate Use
