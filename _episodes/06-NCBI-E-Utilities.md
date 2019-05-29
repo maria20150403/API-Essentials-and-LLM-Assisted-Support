@@ -2,7 +2,7 @@
 title: "Excercise: NCBI E-Utilities"
 Teaching: 
 - "5"
-Exercise: 
+Exercises: 
 - "15"
 questions:
 - "How can we use the Entrez Programming Utilities (E-Utilities) to search across the Entrez Molecular Sequence Database System?"
