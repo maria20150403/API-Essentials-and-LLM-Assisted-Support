@@ -1,9 +1,9 @@
 ---
 title: "API Queries in OpenRefine"
-teaching: 10
+teaching: 15
 exercises: 10
 questions:
-- "How can OpenRefine handle API requests?"
+- "How do I fetch data from an Application Programming Interface (API) to be used in OpenRefine?"
 objectives:
 - "Understand how to fetch data from online sources in OpenRefine"
 - "Explain how to parse JSON data in OpenRefine"

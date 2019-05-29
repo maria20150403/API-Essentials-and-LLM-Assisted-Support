@@ -1,5 +1,5 @@
 ---
-title: "More API Excercises"
+title: "NCBI E-Utilities"
 teaching: 5
 exercises: 15
 questions:

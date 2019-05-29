@@ -4,13 +4,17 @@ title: "Licenses"
 root: .
 ---
 
-## Instructional Material
+# APIs for Libraries
 
-All Software, Data and Library Carpentry instructional material is
-made available under the [Creative Commons Attribution
-license][cc-by-human]. The following is a human-readable summary of
-(and not a substitute for) the [full legal text of the CC BY 4.0
-license][cc-by-legal].
+This workshop's instructional materials '[APIs for Libraries](https://joshuadull.github.io/APIs-for-Libraries/)' were authored by [Joshua Dull](https://github.com/joshuadull), [David Cirella](https://github.com/decirella), and [Sawyer Newman](https://github.com/sauuyer). Thanks to Kate Nyhan, *[Yukari Sugiyama](https://github.com/ysugiyama3)* and Kayleigh Bohemier for additional contributions. This workshop is derived from work that is Copyright © [Software Carpentry](http://software-carpentry.org/), but the workshop content (images, episodes, excercises, etc.) were developed solely by the authors listed above. 
+
+Thank you to The Carpentries for providing the lesson template & style, code of conduct, and setup instructions which are also licensed under [CC-BY 4.0 2018–2019](https://creativecommons.org/licenses/by/4.0/) by [The Carpentries](https://carpentries.org/). 
+
+## License
+
+### Instructional Material
+
+This instructional material is made available under the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/). The following is a human-readable summary of (and not a substitute for) the [full legal text of the CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/legalcode).
 
 You are free:
 
@@ -24,11 +28,8 @@ license terms.
 
 Under the following terms:
 
-* **Attribution**---You must give appropriate credit (mentioning that
-  your work is derived from work that is Copyright © Software
-  Carpentry and, where practical, linking to
-  http://software-carpentry.org/), provide a [link to the
-  license][cc-by-human], and indicate if changes were made. You may do
+* **Attribution**---You must give appropriate credit to the contirbutors listed on this page, provide a [link to the
+  license](https://creativecommons.org/licenses/by/4.0/), and indicate if changes were made. You may do
   so in any reasonable manner, but not in any way that suggests the
   licensor endorses you or your use.
 
