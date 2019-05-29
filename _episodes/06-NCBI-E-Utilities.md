@@ -1,7 +1,6 @@
 ---
 title: "Excercises: NCBI E-Utilities"
-teaching:
-exercises: 
+exercises: "This exercise will approximately 15 " 
 questions:
 - ""
 objectives:
