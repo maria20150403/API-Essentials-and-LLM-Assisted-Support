@@ -1,11 +1,14 @@
 ---
-title: "OCLC WorldCat Search API"
+title: "Exercise: OCLC WorldCat Search API"
 teaching: 5
 exercises: 20
 questions:
-- ""
+- "What are the different OCLC APIs and how are they different?"
+- "What can you query using the WorldCat Search API"
 objectives:
-- ""
+- "Explore creating queries using the WorldCat Search API"
+- "Use the WorldCat API to enhance existing bibliographic data"
+- "Accomplish the exercises using the Shell or OpenRefine"
 keypoints:
 - ""
 ---
