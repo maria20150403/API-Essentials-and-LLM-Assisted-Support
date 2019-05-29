@@ -1,7 +1,7 @@
 ---
-title: "Excercises: NCBI E-Utilities"
-teaching: "5"
-exercises: "15"
+title: "Excercise: NCBI E-Utilities"
+API introduction: "5"
+Exercise: "15"
 questions:
 - "How can we use the Entrez Programming Utilities (E-Utilities) to search across the Entrez Molecular Sequence Database System?"
 objectives:
