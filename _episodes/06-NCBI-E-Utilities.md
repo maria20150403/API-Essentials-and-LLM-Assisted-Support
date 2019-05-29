@@ -1,7 +1,7 @@
 ---
-title: "NCBI E-Utilities"
-teaching: 5
-exercises: 15
+title: "Excercises: NCBI E-Utilities"
+teaching:
+exercises: 
 questions:
 - ""
 objectives:
@@ -10,5 +10,5 @@ keypoints:
 - ""
 ---
 
-## More API Exercises
+## Excercises: NCBI E-Utilities
 
