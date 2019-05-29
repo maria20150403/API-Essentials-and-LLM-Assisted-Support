@@ -87,7 +87,7 @@ $codeblock-padding: 5px !default;
     padding-top: $codeblock-padding;
     padding-bottom: $codeblock-padding;
     font-size: 20px;
-    background: linear-gradient(to bottom, $gradientcolor1, $gradientcolor2);
+    // background: linear-gradient(to bottom, $gradientcolor1, $gradientcolor2);
     border-color: $color;
     margin-top: 0px;
     margin-left: -$codeblock-padding; // to move back to the left margin of the enclosing blockquote;
