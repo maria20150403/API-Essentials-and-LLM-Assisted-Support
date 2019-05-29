@@ -9,7 +9,7 @@ questions:
 objectives:
 - "Explain URL query strings"
 - "Explain how to create API queries"
-- "Exaplain how to read and interperet API documentations"
+- "Explain how to read and interperet API documentation"
 keypoints:
 - "REST APIs use query stings to make requests"
 - "URL queries are found all across the web"
