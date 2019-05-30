@@ -52,7 +52,7 @@ Our Voyager API query returns results in JSON format as a single cell in our exc
 >Let's pull out the Call Number form our JSON results and add it to a new column called 'CallNo':
 >1. Select 'VoyagerData' -> 'Edit column' -> 'Add column based on this column...'
 >2. New column name: 'CallNo'
->3. Add the expression: 'value.parseJson().record[0].items[0].callno'
+>3. Add the expression: _value.parseJson().record[0].items[0].callno_
 >4. Click 'OK'. We should have a new column in out data now. 
 {: .checklist}
 
