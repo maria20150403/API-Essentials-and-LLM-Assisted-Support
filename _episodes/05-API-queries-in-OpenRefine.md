@@ -1,6 +1,6 @@
 ---
 title: "API Queries in OpenRefine"
-teaching: 20
+teaching: 25
 exercises: 10
 questions:
 - "How do I fetch data from an Application Programming Interface (API) to be used in OpenRefine?"
@@ -33,7 +33,7 @@ We will be using the data in File1.xlsx. The column named 'ISBN' contains ISBN n
 
 ![Screenshot of Voyager API query](../assets/img/VoyagerFetch.png)
 
-### New GREL Functions
+## New GREL Functions
 In addition to the functions we've already covered in the [OpenRefine Lesson](https://librarycarpentry.org/lc-open-refine/), these GREL functions will help you complete the exercises in this lesson. You can find the link to the documentation for each function below:
 - [parseJson( )](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Other-Functions#parsejsonstring-s)
 - [parseXml( ), xmlText( ), select( )](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Other-Functions#jsoup-xml-and-html-parsing-functions)
@@ -97,9 +97,9 @@ Many times when working with JSON or XML results, we need to work with an array 
 >4. Click 'OK'. We should have a new column in our data with an array of values.
 {: .checklist}
 
-## Fecth MARCXML records
+## Fetch MARCXML records
 
-The voyager API can also return MARCXML from certain queries. We'll use a different base URL for our next query to retrive XML: `https://libapp-test.library.yale.edu/VoySearch/GetBibMarc?bibid=`
+The voyager API can also return MARCXML from certain queries. We'll use a different base URL for our next query to retrive XML: `https://libapp.library.yale.edu/VoySearch/GetBibMarc?bibid=`
 
 >## Let's fetch MARCXML from Voyager
 > 
