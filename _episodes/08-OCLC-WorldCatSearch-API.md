@@ -73,14 +73,14 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 >1. In the _fetchOCLC_ column, select 'Edit column' -> 'Add column based on this column...'
 >2. New column name: _OCLCNumber_
 >3. Add the expression (don't click OK yet): `value.parseXml().select("controlfield[tag=001]")`
-> - `parseXml()` works like _parseJson()_; it tells OpenRefine we're working with XML
-> - We use `select()` to select the XML element we want. _select()_ always returns an array.
-> - The OCLC number is found in an element called _datafield_ with an attribute called _tag_ that is equal to _001_.
+> - `parseXml()` works like `parseJson()`; it tells OpenRefine we're working with XML
+> - We use `select()` to select the XML element we want. `select()` always returns an array.
+> - The OCLC number is found in an element called _controlfield_ with an attribute called _tag_ that is equal to _001_.
 > <img src="../assets/img/OCLCno.png" height="100" width="592">
 > - The preview shows us our results. We should see an array of XML elements that contain the OCLC numbers associated with each ISBN.
 >4. Change your expression to: `forEach(value.parseXml().select("controlfield[tag=001]"),v,v.xmlText())`
 > - To pull out each number, we need to use a _forEach_ loop (like the Shell _for_ loop). 
-> - `forEach()` takes 3 arguements: array, variable, variable.function()
+> - `forEach()` takes 3 arguements: an array, a variable, and variable.function()
 > - `value.parseXml().select("controlfield[tag=001]")` is our array
 > - `v` is our variable
 > - `v.xmlText()` is our function
@@ -100,7 +100,7 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 >>## Solution
 >>1. `forEach(value.parseXml().select("datafield[tag=050]"),v,v.xmlText()).uniques().join(" | ")`
 >>2. ...
->>3. `"http://www.worldcat.org/webservices/catalog/search/sru?wskey=u50CPHhMV19la1NF7ix4xkp1SzLPnb260HhvSw2DRANGFgrw6tEWImxfqAQV2PaqVeHj9cxYpwAeT6jV&query=srw.bn=" + value + "+AND+srw.li=YUS&frbrGrouping=off"`
+>>3. `"http://www.worldcat.org/webservices/catalog/search/sru?wskey={API-KEY}&query=srw.bn=" + value + "+AND+srw.li=YUS&frbrGrouping=off"`
 >>4. `if(value.parseXml().select("numberOfRecords")[0].xmlText().toNumber() > 0, "TRUE","FALSE")`
 >{: .solution}
 {: .challenge}
