@@ -47,11 +47,11 @@ You can complete the last two exercises in OpenRefine or Shell. The next section
 
 ### New GREL Functions
 In addition to the functions we've already covered in the [OpenRefine Lesson](https://librarycarpentry.org/lc-open-refine/), these GREL functions will help you complete the exercises in this lesson. You can find the link to the documentation for each function below:
-- [parseJson()](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Other-Functions#parsejsonstring-s)
-- [parseXml(), xmlText(), select()](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Other-Functions#jsoup-xml-and-html-parsing-functions)
-- [forEach()](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Controls#foreachexpression-a-variable-v-expression-e)
-- [uniques()](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Array-Functions#uniquesarray-a)
-- [if()](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Controls#ifexpression-o-expression-etrue-expression-efalse)
+- [parseJson( )](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Other-Functions#parsejsonstring-s)
+- [parseXml( ), xmlText( ), select( )](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Other-Functions#jsoup-xml-and-html-parsing-functions)
+- [forEach( )](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Controls#foreachexpression-a-variable-v-expression-e)
+- [uniques( )](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Array-Functions#uniquesarray-a)
+- [if( )](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Controls#ifexpression-o-expression-etrue-expression-efalse)
 
 >## Fetch MARCXML results (OpenRefine)
 >We'll start by using the query you wrote in the previous exwrcise, but expand it to query our csv of titles & ISBNs.
@@ -72,20 +72,20 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 >The steps below will walk through creating a new column that contains every OCLC number associated with each item in our file. 
 >1. In the _fetchOCLC_ column, select 'Edit column' -> 'Add column based on this column...'
 >2. New column name: _OCLCNumber_
->3. Add the expression (don't click OK yet): value.parseXml().select("controlfield[tag=001]")
-> - _parseXml()_ works like _parseJson()_; it tells OpenRefine we're working with XML
-> - We use _select()_ to select the XML element we want. _select()_ always returns an array.
+>3. Add the expression (don't click OK yet): `value.parseXml().select("controlfield[tag=001]")`
+> - `parseXml()` works like _parseJson()_; it tells OpenRefine we're working with XML
+> - We use `select()` to select the XML element we want. _select()_ always returns an array.
 > - The OCLC number is found in an element called _datafield_ with an attribute called _tag_ that is equal to _001_.
-> ![OCLC Number in MARCXML](../assets/img/OCLCno.png) 
+> <img src="../assets/img/OCLCno.png" height="100" width="592">
 > - The preview shows us our results. We should see an array of XML elements that contain the OCLC numbers associated with each ISBN.
 >4. Change your expression to: `forEach(value.parseXml().select("controlfield[tag=001]"),v,v.xmlText())`
 > - To pull out each number, we need to use a _forEach_ loop (like the Shell _for_ loop). 
-> - _forEach()_ takes 3 arguements: array, variable, variable.function()
-> - _value.parseXml().select("controlfield[tag=001]")_ is our array
-> - _v_ is our variable
-> - _v.xmlText()_ is our function
+> - `forEach()` takes 3 arguements: array, variable, variable.function()
+> - `value.parseXml().select("controlfield[tag=001]")` is our array
+> - `v` is our variable
+> - `v.xmlText()` is our function
 > - The results give us an array of OCLC numbers.
->5. If we wanted numbers seperated by the pipe symbol (\|) instead of an array, what function could we add?
+>5. If we wanted numbers seperated by the pipe symbol \| instead of an array, what function could we add?
 >6. Click OK!
 > 
 {: .checklist}
@@ -95,13 +95,13 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 >1. Create a column with each callNo associated with the ISBN. What expression did you use? (Bonus if you can include only the unique callNos in your results)
 >2. Create a column with the number of records returned for each ISBN. Which title returns the most records?
 >3. Write and run a query that will return only the OCLC MARCXML records for each item that Yale has a copy (Yale Library holdings). Record your query in the etherpad.
->4. Advacned: Using the results from question 4, add a new column that will contain "TRUE" if Yale has a copy of an item and "FALSE" if Yale doesn't. Copy your expression to etherpad. (hint: try if() function)
+>4. Advacned: Using the results from question 4, add a new column that will contain "TRUE" if Yale has a copy of an item and "FALSE" if Yale doesn't. Copy your expression to etherpad. (hint: try `if()` function)
 >
 >>## Solution
->>1. forEach(value.parseXml().select("datafield[tag=050]"),v,v.xmlText()).uniques().join(" | ")
+>>1. `forEach(value.parseXml().select("datafield[tag=050]"),v,v.xmlText()).uniques().join(" | ")`
 >>2. ...
->>3. "http://www.worldcat.org/webservices/catalog/search/sru?wskey=u50CPHhMV19la1NF7ix4xkp1SzLPnb260HhvSw2DRANGFgrw6tEWImxfqAQV2PaqVeHj9cxYpwAeT6jV&query=srw.bn=" + value + "+AND+srw.li=YUS&frbrGrouping=off"
->>4. if(value.parseXml().select("numberOfRecords")[0].xmlText().toNumber() > 0, "TRUE","FALSE")
+>>3. `"http://www.worldcat.org/webservices/catalog/search/sru?wskey=u50CPHhMV19la1NF7ix4xkp1SzLPnb260HhvSw2DRANGFgrw6tEWImxfqAQV2PaqVeHj9cxYpwAeT6jV&query=srw.bn=" + value + "+AND+srw.li=YUS&frbrGrouping=off"`
+>>4. `if(value.parseXml().select("numberOfRecords")[0].xmlText().toNumber() > 0, "TRUE","FALSE")`
 >{: .solution}
 {: .challenge}
 
