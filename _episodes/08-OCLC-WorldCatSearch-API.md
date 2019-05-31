@@ -85,7 +85,7 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 > - _v_ is our variable
 > - _v.xmlText()_ is our function
 > - The results give us an array of OCLC numbers.
->5. If we wanted numbers seperated by the pipe symbol (|) instead of an array, what function could we add?
+>5. If we wanted numbers seperated by the pipe symbol (\|) instead of an array, what function could we add?
 >6. Click OK!
 > 
 {: .checklist}
@@ -99,7 +99,7 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 >
 >>## Solution
 >>1. forEach(value.parseXml().select("datafield[tag=050]"),v,v.xmlText()).uniques().join(" | ")
->>2.
+>>2. ...
 >>3. "http://www.worldcat.org/webservices/catalog/search/sru?wskey=u50CPHhMV19la1NF7ix4xkp1SzLPnb260HhvSw2DRANGFgrw6tEWImxfqAQV2PaqVeHj9cxYpwAeT6jV&query=srw.bn=" + value + "+AND+srw.li=YUS&frbrGrouping=off"
 >>4. if(value.parseXml().select("numberOfRecords")[0].xmlText().toNumber() > 0, "TRUE","FALSE")
 >{: .solution}
