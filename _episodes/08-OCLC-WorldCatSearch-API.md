@@ -47,9 +47,6 @@ You can complete the last two exercises in OpenRefine or Shell. The next section
 
 ### New GREL Functions
 In addition to the functions we've already covered in the [OpenRefine Lesson](https://librarycarpentry.org/lc-open-refine/), these GREL functions will help you complete the exercises in this lesson. You can find the link to the documentation for each function below:
-- [parseJson( )](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Other-Functions#parsejsonstring-s)
-- [parseXml( ), xmlText( ), select( )](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Other-Functions#jsoup-xml-and-html-parsing-functions)
-- [forEach( )](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Controls#foreachexpression-a-variable-v-expression-e)
 - [uniques( )](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Array-Functions#uniquesarray-a)
 - [if( )](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Controls#ifexpression-o-expression-etrue-expression-efalse)
 
@@ -67,24 +64,23 @@ In addition to the functions we've already covered in the [OpenRefine Lesson](ht
 
 Now that we fetched data from our API, we need to parse the resulting XML to pull our information.
 
->## Parse MARCXML results
+>## Parse MARCXML results (OpenRefine)
 > Each MARC record retrieved can contain multiple items from WorldCat associated with the ISBN. We need to parse the XML to pull out data about each item. 
 >The steps below will walk through creating a new column that contains every OCLC number associated with each item in our file. 
 >1. In the _fetchOCLC_ column, select 'Edit column' -> 'Add column based on this column...'
 >2. New column name: _OCLCNumber_
 >3. Add the expression (don't click OK yet): `value.parseXml().select("controlfield[tag=001]")`
-> - `parseXml()` works like `parseJson()`; it tells OpenRefine we're working with XML
-> - We use `select()` to select the XML element we want. `select()` always returns an array.
+> - We use `select()` to select the element with the OCLC number.
 > - The OCLC number is found in an element called _controlfield_ with an attribute called _tag_ that is equal to _001_.
 > <img src="../assets/img/OCLCno.png" height="100" width="592">
 > - The preview shows us our results. We should see an array of XML elements that contain the OCLC numbers associated with each ISBN.
 >4. Change your expression to: `forEach(value.parseXml().select("controlfield[tag=001]"),v,v.xmlText())`
 > - To pull out each number, we need to use a _forEach_ loop (like the Shell _for_ loop). 
 > - `forEach()` takes 3 arguements: an array, a variable, and variable.function()
-> - `value.parseXml().select("controlfield[tag=001]")` is our array
-> - `v` is our variable
-> - `v.xmlText()` is our function
-> - The results give us an array of OCLC numbers.
+>  - `value.parseXml().select("controlfield[tag=001]")` is our array
+>  - `v` is our variable
+>  - `v.xmlText()` is our function
+>  - The results give us an array of OCLC numbers.
 >5. If we wanted numbers seperated by the pipe symbol \| instead of an array, what function could we add?
 >6. Click OK!
 > 
