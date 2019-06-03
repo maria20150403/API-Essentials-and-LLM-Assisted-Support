@@ -43,9 +43,18 @@ The E-utilities are made up of 9 programs that provide access to Entrez. You can
 #### E-utilities Documentation
 - [Entrez Programming Utilities Help](https://www.ncbi.nlm.nih.gov/books/NBK25501/) 
 
-#### E-utilities API Syntax
-Part 1 
-URL header: https://eutils.ncbi.nlm.nih.gov/entrez/eutils/
+>##
+>
+>1. Perform a global Entrez search to determine racial/ethnic representation across the databases
+> NIH racial and ethnic categories include American Indian or Alaska Native, Asian, Black or African American, Hispanic or Latino, Native Hawaiian or Other Pacific Islander, and White. (See NOT-OD-15-089)[https://grants.nih.gov/grants/guide/notice-files/not-od-15-089.html] for more details. 
+>>## Solution
+>> Here are the following API calls that would provide you with summary data
+>>1. https://eutils.ncbi.nlm.nih.gov/gquery?term=african+AND+black&retmode=xml
+>>2. https://eutils.ncbi.nlm.nih.gov/gquery?term=white&retmode=xml
+
+>{: .solution}
+{: .challenge}
+
 
 
 
