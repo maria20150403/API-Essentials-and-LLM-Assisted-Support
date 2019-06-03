@@ -33,9 +33,24 @@ Using the Voyager API
 $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953
 ~~~
 {: .bash}
+~~~
+{"record":[{
+"title":"Animism and the question of life /",
+"author":"Praet, Istvan, 1974-",
+"pdescription":"xiv, 198 pages ; 24 cm.",
+"publisher":"Routledge,",
+"pubplace":"New York :",
+"pubdate":"2014.",
+"isxn":"9780415704953",
+"oclcmrn":"ocn853435847",
+"bibid":"11736943",
+"items":[
+{"loccode":"sml","itemenum":"NA","itypename":"Circulating","callno":"GN471 .P73X 2014 (LC)","itemstatus":"Not Charged","barcodestatus":"Active","itemchron":"NA","itemid":"10677986","itemformat":"SPM","itypecode":"circ","itemspinelabel":"NA","itemstat":"NA","locname":"SML, Stacks, LC Classification","barcode":"39002123260565","mfhdid":"11858762","availdate":"NA"}
+]
+}]}
 
-Remember, if at any time you are not sure where you are in your directory structure,
-use the `pwd` command to find out:
+~~~
+{: .output}
 
 The API response can be written to a file using the angled bracket `>` followed by a file name:
 
