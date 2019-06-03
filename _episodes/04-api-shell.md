@@ -39,11 +39,17 @@ use the `pwd` command to find out:
 
 The API response can be written to a file using the angled bracket `>` followed by a file name:
 
-`$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 > file.txt `   
+~~~
+$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 > file.txt
+~~~
+{: .bash}
 
 Alternatively, the output can be piped to another command for futher action:
 
-`$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 | wc -l `
+~~~
+$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 | wc -l
+~~~
+{: .bash}
 
 This example uses the `wc`` command with the `-l` option to count the number of lines in the response.   
 
@@ -55,7 +61,10 @@ The `jq` command
 
 #### Formatting Output
 
-` $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.'`
+~~~
+$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.'
+~~~
+{: .bash}
 
 
 
