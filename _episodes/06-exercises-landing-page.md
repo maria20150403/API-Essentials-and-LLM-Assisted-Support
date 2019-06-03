@@ -1,7 +1,7 @@
 ---
 title: "Synchronous Exercises"
 teaching: 5
-excercises: 20 
+exercises: 20 
 questions: 
 - "How can you apply the skills you have learned to explore new APIs?"
 ---
