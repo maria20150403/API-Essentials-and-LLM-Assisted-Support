@@ -1,7 +1,9 @@
 ---
 title: "Exercise: OCLC WorldCat Search API"
-teaching: 5
-exercises: 20
+teaching: 
+- "5"
+exercises: 
+- "20"
 questions:
 - "What are the different OCLC APIs and how are they different?"
 - "What can you query using the WorldCat Search API"
