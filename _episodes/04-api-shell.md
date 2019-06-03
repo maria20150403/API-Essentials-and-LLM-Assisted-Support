@@ -21,39 +21,41 @@ With a [URL query](https://joshuadull.github.io/APIs-for-Libraries/03-Creating-u
 ## Shell Tools  
 Building on the skill from [Unix shell](https://librarycarpentry.org/lc-shell/) lesson, we add the following commandline programs for working with APIs
 
-- ```curl```   - A command line tool for transferring data from URLs
-- ```jq```  - A commandline JSON processor
-- ```xmllint```  - A command line XML parser
+- `curl`   - A command line tool for transferring data from URLs
+- `jq`  - A commandline JSON processor
+- `xmllint`  - A command line XML parser
 
-## API ```Get``` Requests  
-```$ curl  ```
+## API `Get` Requests  
+`$ curl  `
 
 Using the Voyager API
-
 ~~~
-$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 ~~~
+$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953
+~~~
 {: .bash}
 
+Remember, if at any time you are not sure where you are in your directory structure,
+use the `pwd` command to find out:
 
-The API response can be written to a file using the angled bracket ```>``` followed by a file name:
+The API response can be written to a file using the angled bracket `>` followed by a file name:
 
-```$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 > file.txt ```   
+`$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 > file.txt `   
 
 Alternatively, the output can be piped to another command for futher action:
 
-```$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 | wc -l ```
+`$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 | wc -l `
 
-This example uses the ```wc`` command with the ```-l``` option to count the number of lines in the response.   
+This example uses the `wc`` command with the `-l` option to count the number of lines in the response.   
 
 
 
 ## JSON Processing
 
-The ```jq``` command 
+The `jq` command 
 
 #### Formatting Output
 
-``` $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.'```
+` $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.'`
 
 
 
