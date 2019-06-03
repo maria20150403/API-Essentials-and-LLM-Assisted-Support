@@ -32,7 +32,8 @@ Using the Voyager API
 
 ~~~
 $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 ~~~
-{: .bash}  
+{: .bash}
+
 
 The API response can be written to a file using the angled bracket ```>``` followed by a file name:
 
