@@ -25,6 +25,8 @@ Building on the skill from [Unix shell](https://librarycarpentry.org/lc-shell/) 
 - `jq`  - A commandline JSON processor
 - `xmllint`  - A command line XML parser
 
+In this lesson we will use `curl` command for interacting with our API endpoints and either `jq` or `xmllint` to process the return based on the type response that is given by the endpoint.  In both cases we use the Unix shell pipe `|` to redirect the output of the `curl` command into the next for processing.
+
 ## API `Get` Requests  
 `$ curl  `
 
@@ -70,18 +72,89 @@ This example uses the `wc`` command with the `-l` option to count the number of 
 
 
 
-## JSON Processing
+## JSON filtering with `jq`
 
-The `jq` command 
+The `jq` command transforms JSON content through selection and filtering.  Using the Unix shell "pipe" `|` allows us to take the API response that we recieve from our `curl` command, and process it in varoius ways with `jq`  
 
-#### Formatting Output
+
+ 
+
+#### Pretty-print with `jq .`
+Be default, the JSON returned in most API calls has the white-space removed, while this is more efficient for transfer and makes no operational difference, it makes the data difficult for humans to read.  The `jq` tool can be used to pretty-print, or format the JSON in a human-readable way, using the `.` command.
 
 ~~~
 $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.'
 ~~~
 {: .bash}
+~~~
+{
+  "record": [
+    {
+      "title": "Animism and the question of life /",
+      "author": "Praet, Istvan, 1974-",
+      "pdescription": "xiv, 198 pages ; 24 cm.",
+      "publisher": "Routledge,",
+      "pubplace": "New York :",
+      "pubdate": "2014.",
+      "isxn": "9780415704953",
+      "oclcmrn": "ocn853435847",
+      "bibid": "11736943",
+      "items": [
+        {
+          "loccode": "sml",
+          "itemenum": "NA",
+          "itypename": "Circulating",
+          "callno": "GN471 .P73X 2014 (LC)",
+          "itemstatus": "Not Charged",
+          "barcodestatus": "Active",
+          "itemchron": "NA",
+          "itemid": "10677986",
+          "itemformat": "SPM",
+          "itypecode": "circ",
+          "itemspinelabel": "NA",
+          "itemstat": "NA",
+          "locname": "SML, Stacks, LC Classification",
+          "barcode": "39002123260565",
+          "mfhdid": "11858762",
+          "availdate": "NA"
+        }
+      ]
+    }
+  ]
+}
+
+~~~
+{: .output}
 
 
+### Filter by Key
+`jq` can be used to select the values of a specified key, or keys.  This allows for specific pieces of data, from the overall JSON object to be filtered and returned.
+
+In this example, we return just the title.
+~~~
+$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.record[].title''
+~~~
+{: .bash}
+~~~
+"Animism and the question of life /"
+~~~
+{: .output
+
+Since the Voyager API JSON response begins with the root "record" key, with use the element key `.record` followed by the open and close square brackets`[]` to put all of the child elements in an array, the final selector is the `.title` to select all of the title elements for items in the this JSON response.
+
+
+We can specific multiple keys in a single filter, In this example, we return the title and author by specificy both keys, seperated by a comma.
+~~~
+$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.record[]., .record[].author '
+
+~~~
+{: .bash}
+~~~
+"Animism and the question of life /"
+"Praet, Istvan, 1974-"
+
+~~~
+{: .output}
 
 ## XML Processing
 
