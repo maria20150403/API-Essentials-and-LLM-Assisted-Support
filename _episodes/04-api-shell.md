@@ -28,9 +28,11 @@ Building on the skill from [Unix shell](https://librarycarpentry.org/lc-shell/) 
 In this lesson we will use `curl` command for interacting with our API endpoints and either `jq` or `xmllint` to process the return based on the type response that is given by the endpoint.  In both cases we use the Unix shell pipe `|` to redirect the output of the `curl` command into the next for processing.
 
 ## API `Get` Requests  
-`$ curl  `
+A tool for transfering data via URL, the `curl  ` command allows use to interact with API endpoints from the command line.  A full-featured tool, the `curl` command  has built-in functionality to work with *most* types of API endpoint and authenitication schemes.  While our examples using the Yale University Library Voyager API is does not require authentication, the full manual of usage options are available on the command line by entering `man curl`
+ 
 
-Using the Voyager API
+Using the Voyager API we enter the command `curl` followed the URL for the Bibliographic item with the isbn 9780415704953 
+
 ~~~
 $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953
 ~~~
@@ -158,9 +160,132 @@ $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  
 
 ## XML Processing
 
+
+
+~~~
+$ curl https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953 
+~~~
+{: .bash}
+~~~
+<?xml version="1.0" encoding="UTF-8"?><collection xmlns="http://www.loc.gov/MARC21/slim"><record><leader>01082pam a2200361 i 4500</leader><controlfield tag="001">11736943</controlfield><controlfield tag="005">20131211185012.0</controlfield><controlfield tag="008">130405s2014    nyua     b    001 0 eng  </controlfield><datafield tag="010" ind1=" " ind2=" "><subfield code="a">  2013013852</subfield></datafield><datafield tag="020" ind1=" " ind2=" "><subfield code="a">9780415704953</subfield></datafield><datafield tag="020" ind1=" " ind2=" "><subfield code="a">0415704952</subfield></datafield><datafield tag="024" ind1="8" ind2=" "><subfield code="a">40022828439</subfield></datafield><datafield tag="035" ind1=" " ind2=" "><subfield code="a">(OCoLC)ocn864945837</subfield></datafield><datafield tag="035" ind1=" " ind2=" "><subfield code="a">(NhCcYBP)  2013013852</subfield></datafield><datafield tag="035" ind1=" " ind2=" "><subfield code="a">11736943</subfield></datafield><datafield tag="040" ind1=" " ind2=" "><subfield code="a">DLC</subfield><subfield code="b">eng</subfield><subfield code="e">rda</subfield><subfield code="c">DLC</subfield><subfield code="d">OCLCO</subfield><subfield code="d">YDXCP</subfield><subfield code="d">NhCcYBP</subfield></datafield><datafield tag="042" ind1=" " ind2=" "><subfield code="a">pcc</subfield></datafield><datafield tag="050" ind1="0" ind2="0"><subfield code="a">GN471</subfield><subfield code="b">.P73 2014</subfield></datafield><datafield tag="079" ind1=" " ind2=" "><subfield code="a">ocn853435847</subfield></datafield><datafield tag="090" ind1=" " ind2=" "><subfield code="a">GN471</subfield><subfield code="b">.P73X 2014 (LC)</subfield></datafield><datafield tag="100" ind1="1" ind2=" "><subfield code="a">Praet, Istvan,</subfield><subfield code="d">1974-</subfield></datafield><datafield tag="245" ind1="1" ind2="0"><subfield code="a">Animism and the question of life /</subfield><subfield code="c">Istvan Praet.</subfield></datafield><datafield tag="264" ind1=" " ind2="1"><subfield code="a">New York :</subfield><subfield code="b">Routledge,</subfield><subfield code="c">2014.</subfield></datafield><datafield tag="300" ind1=" " ind2=" "><subfield code="a">xiv, 198 pages ;</subfield><subfield code="c">24 cm.</subfield></datafield><datafield tag="336" ind1=" " ind2=" "><subfield code="a">text</subfield><subfield code="2">rdacontent</subfield></datafield><datafield tag="337" ind1=" " ind2=" "><subfield code="a">unmediated</subfield><subfield code="2">rdamedia</subfield></datafield><datafield tag="338" ind1=" " ind2=" "><subfield code="a">volume</subfield><subfield code="2">rdacarrier</subfield></datafield><datafield tag="490" ind1="1" ind2=" "><subfield code="a">Routledge studies in anthropology ;</subfield><subfield code="v">15</subfield></datafield><datafield tag="504" ind1=" " ind2=" "><subfield code="a">Includes bibliographical references and index.</subfield></datafield><datafield tag="650" ind1=" " ind2="0"><subfield code="a">Animism.</subfield></datafield><datafield tag="650" ind1=" " ind2="0"><subfield code="a">Anthropology of religion.</subfield></datafield><datafield tag="650" ind1=" " ind2="0"><subfield code="a">Life.</subfield></datafield><datafield tag="830" ind1=" " ind2="0"><subfield code="a">Routledge studies in anthropology ;</subfield><subfield code="v">15.</subfield></datafield></record></collection>
+
+~~~
+{: .output}
+
 Converting response from Voyager API to text, select element
 
+#### Pretty-print with `xmllint`
 
+~~~
+$ curl https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953 | xmllint --format -
+~~~
+{: .bash}
+~~~
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://www.loc.gov/MARC21/slim">
+  <record>
+    <leader>01082pam a2200361 i 4500</leader>
+    <controlfield tag="001">11736943</controlfield>
+    <controlfield tag="005">20131211185012.0</controlfield>
+    <controlfield tag="008">130405s2014    nyua     b    001 0 eng  </controlfield>
+    <datafield tag="010" ind1=" " ind2=" ">
+      <subfield code="a">  2013013852</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">9780415704953</subfield>
+    </datafield>
+    <datafield tag="020" ind1=" " ind2=" ">
+      <subfield code="a">0415704952</subfield>
+    </datafield>
+    <datafield tag="024" ind1="8" ind2=" ">
+      <subfield code="a">40022828439</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(OCoLC)ocn864945837</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">(NhCcYBP)  2013013852</subfield>
+    </datafield>
+    <datafield tag="035" ind1=" " ind2=" ">
+      <subfield code="a">11736943</subfield>
+    </datafield>
+    <datafield tag="040" ind1=" " ind2=" ">
+      <subfield code="a">DLC</subfield>
+      <subfield code="b">eng</subfield>
+      <subfield code="e">rda</subfield>
+      <subfield code="c">DLC</subfield>
+      <subfield code="d">OCLCO</subfield>
+      <subfield code="d">YDXCP</subfield>
+      <subfield code="d">NhCcYBP</subfield>
+    </datafield>
+    <datafield tag="042" ind1=" " ind2=" ">
+      <subfield code="a">pcc</subfield>
+    </datafield>
+    <datafield tag="050" ind1="0" ind2="0">
+      <subfield code="a">GN471</subfield>
+      <subfield code="b">.P73 2014</subfield>
+    </datafield>
+    <datafield tag="079" ind1=" " ind2=" ">
+      <subfield code="a">ocn853435847</subfield>
+    </datafield>
+    <datafield tag="090" ind1=" " ind2=" ">
+      <subfield code="a">GN471</subfield>
+      <subfield code="b">.P73X 2014 (LC)</subfield>
+    </datafield>
+    <datafield tag="100" ind1="1" ind2=" ">
+      <subfield code="a">Praet, Istvan,</subfield>
+      <subfield code="d">1974-</subfield>
+    </datafield>
+    <datafield tag="245" ind1="1" ind2="0">
+      <subfield code="a">Animism and the question of life /</subfield>
+      <subfield code="c">Istvan Praet.</subfield>
+    </datafield>
+    <datafield tag="264" ind1=" " ind2="1">
+      <subfield code="a">New York :</subfield>
+      <subfield code="b">Routledge,</subfield>
+      <subfield code="c">2014.</subfield>
+    </datafield>
+    <datafield tag="300" ind1=" " ind2=" ">
+      <subfield code="a">xiv, 198 pages ;</subfield>
+      <subfield code="c">24 cm.</subfield>
+    </datafield>
+    <datafield tag="336" ind1=" " ind2=" ">
+      <subfield code="a">text</subfield>
+      <subfield code="2">rdacontent</subfield>
+    </datafield>
+    <datafield tag="337" ind1=" " ind2=" ">
+      <subfield code="a">unmediated</subfield>
+      <subfield code="2">rdamedia</subfield>
+    </datafield>
+    <datafield tag="338" ind1=" " ind2=" ">
+      <subfield code="a">volume</subfield>
+      <subfield code="2">rdacarrier</subfield>
+    </datafield>
+    <datafield tag="490" ind1="1" ind2=" ">
+      <subfield code="a">Routledge studies in anthropology ;</subfield>
+      <subfield code="v">15</subfield>
+    </datafield>
+    <datafield tag="504" ind1=" " ind2=" ">
+      <subfield code="a">Includes bibliographical references and index.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Animism.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Anthropology of religion.</subfield>
+    </datafield>
+    <datafield tag="650" ind1=" " ind2="0">
+      <subfield code="a">Life.</subfield>
+    </datafield>
+    <datafield tag="830" ind1=" " ind2="0">
+      <subfield code="a">Routledge studies in anthropology ;</subfield>
+      <subfield code="v">15.</subfield>
+    </datafield>
+  </record>
+</collection>
+
+~~~
+{: .output}
 
 ## 
 Pipe to other shell tools, create csv, loop?
