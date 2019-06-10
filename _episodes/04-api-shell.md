@@ -140,7 +140,7 @@ $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  
 ~~~
 "Animism and the question of life /"
 ~~~
-{: .output
+{: .output}
 
 Since the Voyager API JSON response begins with the root "record" key, with use the element key `.record` followed by the open and close square brackets`[]` to put all of the child elements in an array, the final selector is the `.title` to select all of the title elements for items in the this JSON response.
 
