@@ -89,12 +89,12 @@ Again, here is the same data as above, but in XML format.
 ## Appropriate Use of Data Accessed through APIs
 
 ##### Provide feedback to the original data provider 
-Let the original publisher know when you are reusing their data. When you begin using a dataset in a new project, make a note of the publisher’s contact information, the URI of the dataset you used, and the date on which you contacted them. This can be done in the comments within your code where the dataset is used. (This is a W3C recommended best practice)[https://www.w3.org/TR/dwbp/#accessAPIs].
+Let the original publisher know when you are reusing their data. When you begin using a dataset in a new project, make a note of the publisher’s contact information, the URI of the dataset you used, and the date on which you contacted them. This can be done in the comments within your code where the dataset is used. [This is a W3C recommended best practice](https://www.w3.org/TR/dwbp/#accessAPIs).
 
 ##### Follow Licensing Terms
-Find and follow the licensing requirements from the original publisher of the dataset. (This is a W3C recommended best practice)[https://www.w3.org/TR/dwbp/#accessAPIs].
+Find and follow the licensing requirements from the original publisher of the dataset. [This is a W3C recommended best practice](https://www.w3.org/TR/dwbp/#accessAPIs).
 
-DataWorld provides a (list of the common license types for datasets)[https://help.data.world/hc/en-us/articles/115006114287-Common-license-types-for-datasets]. Specific licensing details can usually be found in API documentation. 
+DataWorld provides a [list of the common license types for datasets](https://help.data.world/hc/en-us/articles/115006114287-Common-license-types-for-datasets). Specific licensing details can usually be found in API documentation. 
 
 ##### User Authentication 
 Some APIs require you to register for a key, or code, in order to use the tool. This key gives the API developers better ability to track who is accessing and reusing data, and how and how much is being reused, and what the data is being reused for.
