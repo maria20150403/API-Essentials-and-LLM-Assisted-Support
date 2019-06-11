@@ -53,7 +53,7 @@ In addition to the functions we've already covered in the [OpenRefine Lesson](ht
 - [if( )](https://github.com/OpenRefine/OpenRefine/wiki/GREL-Controls#ifexpression-o-expression-etrue-expression-efalse)
 
 >## Fetch MARCXML results (OpenRefine)
->We'll start by using the query you wrote in the previous exwrcise, but expand it to query our csv of titles & ISBNs.
+>We'll start by using the query you wrote in the previous exercise, but expand it to query our csv of titles & ISBNs.
 > - Create a new project in OpenRefine using the provided data. You should have 2 columns: Title & ISBN.
 > - Add a new column called _fetchOCLC_ that contains the full MARCXML record for each title. 
 >1. What steps did you take to create column _fetchOCLC_?
@@ -107,16 +107,19 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 
 >## Fetch MARCXML results (Shell) 
 >
->1. 
+>1. Use the query written int eh first exercise to pull the MARCXML for the item with the ISBN _9781442237360_. Run this query in the shell and save the MARCXML results as a file. What commands did you use?
+>2. Use the same query, but this time save only the title & author in a text file. What commands did you use?
 >
 >>## Solution
 >>1. 	 
 >{: .solution}
 {: .challenge}
 
->## Fetch MARCXML results (Shell) 
->
->1. 
+>## More queries in Shell 
+> We worked on retrieving one result at a time in the Shell, but we can scale up this process using loops.
+>1. Write a `for` loop that will open the file _items.csv_, query for each ISBN, and save each result as a XML file.
+>2. Write a command that will open the file _items.csv_, query for each ISBN, and save each title in a single file called _titles.csv_.
+>3. Write a command that will open the file _items.csv_, query only for items Yale has a copy (Yale Library holdings), and return a MARCXML file for each of the Yale holdings. 
 >
 >>## Solution
 >>1. 	 
