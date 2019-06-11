@@ -81,7 +81,7 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 >  - `v` is our variable
 >  - `v.xmlText()` is our function
 >  - The results give us an array of OCLC numbers.
->5. If we wanted numbers seperated by the pipe symbol \| instead of an array, what function could we add?
+>5. OpenRefine won't save an array in a cell, what would we add so the numbers are seperated by the pipe symbol \| instead of an array?
 >6. Click OK!
 > 
 {: .checklist}
@@ -91,11 +91,11 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 >1. Create a column with each callNo associated with the ISBN. What expression did you use? (Bonus if you can include only the unique callNos in your results)
 >2. Create a column with the number of records returned for each ISBN. Which title returns the most records?
 >3. Write and run a query that will return only the OCLC MARCXML records for each item that Yale has a copy (Yale Library holdings). Record your query in the etherpad.
->4. Advacned: Using the results from question 4, add a new column that will contain "TRUE" if Yale has a copy of an item and "FALSE" if Yale doesn't. Copy your expression to etherpad. (hint: try `if()` function)
+>4. Advacned: Using the results from question 3, add a new column that will contain "TRUE" if Yale has a copy of an item and "FALSE" if Yale doesn't. Copy your expression to etherpad. (hint: try `if()` function)
 >
 >>## Solution
 >>1. `forEach(value.parseXml().select("datafield[tag=050]"),v,v.xmlText()).uniques().join(" | ")`
->>2. ...
+>>2. `value.parseXml().select("numberOfRecords")[0].xmlText()`, "Brief history of death / W.M. Spellman." has 12 records 
 >>3. `"http://www.worldcat.org/webservices/catalog/search/sru?wskey={API-KEY}&query=srw.bn=" + value + "+AND+srw.li=YUS&frbrGrouping=off"`
 >>4. `if(value.parseXml().select("numberOfRecords")[0].xmlText().toNumber() > 0, "TRUE","FALSE")`
 >{: .solution}
@@ -105,16 +105,15 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 
 >## Fetch MARCXML results (Shell) 
 >
->1. Use the query written int eh first exercise to pull the MARCXML for the item with the ISBN _9781442237360_. Run this query in the shell and save the MARCXML results as a file. What commands did you use?
->2. Use the same query, but this time save only the title & author in a text file. What commands did you use?
+>1. Use the query written in the first exercise to pull the MARCXML for the item with the ISBN _9781442237360_. Run this query in the shell and save the MARCXML results as a file. What commands did you use? (hint: put your query URL in "quotes")
 >
 >>## Solution
->>1. 	 
+>>1. curl "http://www.worldcat.org/webservices/catalog/search/sru?wskey={API.KEY}&query=srw.bn=9781442237360&frbrGrouping=off" > output.xml
 >{: .solution}
 {: .challenge}
 
 >## More queries in Shell 
-> We worked on retrieving one result at a time in the Shell, but we can scale up this process using loops.
+> We worked on retrieving one result at a time in the Shell, but we can scale up this process using loops. Please download/use the file [_items.csv_](https://github.com/JoshuaDull/APIs-for-Libraries/raw/gh-pages/data/items.csv) for this exercise.
 >1. Write a `for` loop that will open the file _items.csv_, query for each ISBN, and save each result as a XML file.
 >2. Write a command that will open the file _items.csv_, query for each ISBN, and save each title in a single file called _titles.csv_.
 >3. Write a command that will open the file _items.csv_, query only for items Yale has a copy (Yale Library holdings), and return a MARCXML file for each of the Yale holdings. 

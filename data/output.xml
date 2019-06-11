@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type='text/xsl' href='/webservices/catalog/xsl/searchRetrieveResponse.xsl'?>
+
+<searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/" xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<version>1.1</version>
+<numberOfRecords>8</numberOfRecords>
+<records>
+<record>
+<recordSchema>marcxml</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+    <leader>00000cam a2200000Ki 4500</leader>
+    <controlfield tag="001">884725738</controlfield>
+    <controlfield tag="008">140728s2014    mdu     ob    001 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781442237377</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1442237376</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="z">9781442237360</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="z">1442237368</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Nobody expects the Spanish Inquisition :</subfield>
+      <subfield code="b">cultural contexts in Monty Python /</subfield>
+      <subfield code="c">edited by Tomasz Dobrogoszcz ; foreword by Terry Jones.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">Lanham :</subfield>
+      <subfield code="b">Rowman &amp; Littlefield,</subfield>
+      <subfield code="c">[2014]</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">1 online resource</subfield>
+    </datafield>
+    <datafield ind1="0" ind2=" " tag="505">
+      <subfield code="a">Title Page -- Acknowledgments -- Foreword -- Monty Python's Body and Death -- "It's a Mr. Death or Something. He Has Come about the Reaping. I Don't Think We Need Any at the Moment" -- The Body, Desire, and the Abject -- The Representation of the Woman's Body in Monty Python's The Meaning of Life -- Monty Python, the Fool -- Monty Python and the Flying Feast of Fools -- "How Fortunate We Are Indeed to Have Such a Poet on These Shores" -- The Village Idiot and His Relation to the Unconscious -- Monty Python Goes Abroad -- The British Look Abroad: Monty Python and the Foreign -- Twentieth-Century Vole, Mr. Neutron, and Spam -- Monty Python's Fliegender Zirkus -- Pythonian Aesthetics and Beyond -- Eric Idle and the Counterculture -- Kitsch Britannia in Monty Python's Flying Circus -- Index -- About the Editor and Contributors.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="520">
+      <subfield code="a">This short collection of essays looks at the television show and films produced by the Monty Python troupe from a number of perspectives: Gender studies Post-structuralism Psychoanalysis Cultural studies.</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="0" tag="610">
+      <subfield code="a">Monty Python (Comedy troupe)</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="7" tag="610">
+      <subfield code="a">Monty Python (Comedy troupe)</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00530439</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">PERFORMING ARTS</subfield>
+      <subfield code="x">Reference.</subfield>
+      <subfield code="2">bisacsh</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="655">
+      <subfield code="a">Electronic books.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Dobrogoszcz, Tomasz,</subfield>
+      <subfield code="d">1970-</subfield>
+      <subfield code="e">editor.</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">Ebook Library</subfield>
+      <subfield code="u">http://public.eblib.com/choice/publicfullrecord.aspx?p=1752874</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">Ebook Library</subfield>
+      <subfield code="u">http://public.eblib.com/choice/publicfullrecord.aspx?p=1752874_0</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">ebrary</subfield>
+      <subfield code="u">http://site.ebrary.com/id/10899146</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">EBSCOhost</subfield>
+      <subfield code="u">http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=817399</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">MyiLibrary</subfield>
+      <subfield code="u">http://www.myilibrary.com?id=630715</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">OverDrive</subfield>
+      <subfield code="u">https://www.overdrive.com/search?q=64D87E6A-8AFD-48C5-8B0E-C4F36B22F6A9</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">ProQuest Ebook Central</subfield>
+      <subfield code="u">http://public.ebookcentral.proquest.com/choice/publicfullrecord.aspx?p=1752874</subfield>
+    </datafield>
+    <datafield ind1="4" ind2=" " tag="856">
+      <subfield code="3">Excerpt</subfield>
+      <subfield code="u">https://samples.overdrive.com/nobody-expects-the?.epub-sample.overdrive.com</subfield>
+    </datafield>
+    <datafield ind1="4" ind2=" " tag="856">
+      <subfield code="3">Image</subfield>
+      <subfield code="u">http://images.contentreserve.com/ImageType-100/1873-1/{64D87E6A-8AFD-48C5-8B0E-C4F36B22F6A9}Img100.jpg</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="z">VIEW FULL TEXT</subfield>
+      <subfield code="u">http://VH7QX3XE2P.search.serialssolutions.com/?V=1.0&amp;L=VH7QX3XE2P&amp;S=JCs&amp;C=TC0001289429&amp;T=marc&amp;tab=BOOKS</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="u">https://login.gbcprx01.georgebrown.ca/login?url=https://ebookcentral.proquest.com/lib/georgebrown-ebooks/detail.action?docID=1752874</subfield>
+      <subfield code="z">Click to view</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="u">https://ebookcentral.proquest.com/lib/liverpool/detail.action?docID=1752874</subfield>
+      <subfield code="z">&lt;img src="/screens/gifs/go4.gif" alt="Go button" border="0" width="21" height="21" hspace="7" align="middle"&gt; View this e-book online</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="u">http://ra.ocls.ca/ra/login.aspx?inst=stlawrence&amp;url=https://ebookcentral.proquest.com/lib/stlawrence-ebooks/detail.action?docID=1752874</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="u">https://login.library.sheridanc.on.ca/login?url=https://ebookcentral.proquest.com/lib/sheridanc-ebooks/detail.action?docID=1752874</subfield>
+      <subfield code="z">Full Text online from PROQUEST</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="u">http://ebookcentral.proquest.com/lib/utk/detail.action?docID=1752874</subfield>
+      <subfield code="z">Click to View</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="u">https://ebookcentral.proquest.com/lib/uvic/detail.action?docID=1752874</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="u">https://ebookcentral.proquest.com/lib/columbia/detail.action?docID=1752874</subfield>
+      <subfield code="z">Ebook Central Academic Complete</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="u">http://www.vlebooks.com/vleweb/product/openreader?id=none&amp;isbn=9781442237377</subfield>
+    </datafield>
+  </record>
+</recordData>
+</record>
+<record>
+<recordSchema>marcxml</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+    <leader>00000cam a2200000 i 4500</leader>
+    <controlfield tag="001">879602603</controlfield>
+    <controlfield tag="008">140514s2014    mdu      b    001 0 eng  </controlfield>
+    <datafield ind1=" " ind2=" " tag="010">
+      <subfield code="a">  2014014377</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781442237360</subfield>
+      <subfield code="q">(cloth ;</subfield>
+      <subfield code="q">alk. paper)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1442237368</subfield>
+      <subfield code="q">(cloth ;</subfield>
+      <subfield code="q">alk. paper)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="z">9781442237377</subfield>
+      <subfield code="q">(ebook)</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Nobody expects the Spanish Inquisition :</subfield>
+      <subfield code="b">cultural contexts in Monty Python /</subfield>
+      <subfield code="c">edited by Tomasz Dobrogoszcz ; foreword by Terry Jones.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">Lanham :</subfield>
+      <subfield code="b">Rowman &amp; Littlefield,</subfield>
+      <subfield code="c">[2014]</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">xiii, 154 pages ;</subfield>
+      <subfield code="c">24 cm</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="520">
+      <subfield code="a">Monty Python s Flying Circus was one of the most important and influential cultural phenomena of the 1970s. The British program was followed by albums, stage appearances, and several films, including Monty Python and the Holy Grail, Life of Brian, and Monty Python's The Meaning of Life. In all, the comic troupe drew on a variety of cultural references that prominently figured in their sketches, and they tackled weighty matters that nonetheless amused their audiences. In Nobody Expects the Spanish Inquisition: Cultural Contexts in Monty Python, Tomasz Dobrogoszcz presents essays that explore the various touchstones in the television show and subsequent films.</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="505">
+      <subfield code="a">Machine generated contents note:</subfield>
+      <subfield code="g">pt. I</subfield>
+      <subfield code="t">Monty Python's Body and Death --</subfield>
+      <subfield code="g">1.</subfield>
+      <subfield code="t">"It's a Mr. Death or Something. He Has Come about the Reaping. I Don't Think We Need Any at the Moment": Death and the Denial of Death in the Works of Monty Python /</subfield>
+      <subfield code="r">Katarzyna Malecka --</subfield>
+      <subfield code="g">2.</subfield>
+      <subfield code="t">The Body, Desire, and the Abject: The Corpse and Cannibalism in Monty Python's Flying Circus Sketches /</subfield>
+      <subfield code="r">Edyta Lorek-Jezinska --</subfield>
+      <subfield code="g">3.</subfield>
+      <subfield code="t">The Representation of the Woman's Body in Monty Python's The Meaning of Life /</subfield>
+      <subfield code="r">Katarzyna Poloczek --</subfield>
+      <subfield code="g">pt. II</subfield>
+      <subfield code="t">Monty Python, the Fool --</subfield>
+      <subfield code="g">4.</subfield>
+      <subfield code="t">Monty Python and the Flying Feast of Fools /</subfield>
+      <subfield code="r">Wojciech Klepuszewski --</subfield>
+      <subfield code="g">5.</subfield>
+      <subfield code="t">"How Fortunate We Are Indeed to Have Such a Poet on These Shores": Shakespeare, Monty Python, and the Tradition of the Wise Fool /</subfield>
+      <subfield code="r">Miguel Angel Gonzalez Campos --</subfield>
+      <subfield code="g">6.</subfield>
+      <subfield code="t">The Village Idiot and His Relation to the Unconscious /</subfield>
+      <subfield code="r">Tomasz Dobrogoszcz --</subfield>
+      <subfield code="g">pt. III</subfield>
+      <subfield code="t">Monty Python Goes Abroad --</subfield>
+      <subfield code="g">7.</subfield>
+      <subfield code="t">The British Look Abroad: Monty Python and the Foreign /</subfield>
+      <subfield code="r">Tomasz Dobrogoszcz --</subfield>
+      <subfield code="g">8.</subfield>
+      <subfield code="t">Twentieth-Century Vole, Mr. Neutron, and Spam: Portrayals of American Culture in the Work of Monty Python /</subfield>
+      <subfield code="r">Kevin F. Kern --</subfield>
+      <subfield code="g">9.</subfield>
+      <subfield code="t">Monty Python's Fliegender Zirkus: The Unique German Show /</subfield>
+      <subfield code="r">Adam Sumera --</subfield>
+      <subfield code="g">pt. IV</subfield>
+      <subfield code="t">Pythonian Aesthetics and Beyond --</subfield>
+      <subfield code="g">10.</subfield>
+      <subfield code="t">Eric Idle and the Counterculture /</subfield>
+      <subfield code="r">Richard Mills --</subfield>
+      <subfield code="g">11.</subfield>
+      <subfield code="t">Kitsch Britannia in Monty Python's Flying Circus /</subfield>
+      <subfield code="r">Justyna Stepien.</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="0" tag="610">
+      <subfield code="a">Monty Python (Comedy troupe)</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="7" tag="610">
+      <subfield code="a">Monty Python (Comedy troupe)</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00530439</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="7" tag="610">
+      <subfield code="a">Monty Python.</subfield>
+      <subfield code="0">(DE-588)811153-4</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Fernsehsendung.</subfield>
+      <subfield code="0">(DE-588)4016842-6</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Film.</subfield>
+      <subfield code="0">(DE-588)4017102-4</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Dobrogoszcz, Tomasz,</subfield>
+      <subfield code="d">1970-</subfield>
+      <subfield code="e">editor.</subfield>
+    </datafield>
+  </record>
+</recordData>
+</record>
+<record>
+<recordSchema>marcxml</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+    <leader>00000cam a2200000Mi 4500</leader>
+    <controlfield tag="001">944726687</controlfield>
+    <controlfield tag="008">140728s2014    mdu     ob    001 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781442237377</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1442237376</subfield>
+      <subfield code="q">(electronic bk.)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781442237360</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1442237368</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781306994644</subfield>
+      <subfield code="q">(MyiLibrary)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1306994640</subfield>
+      <subfield code="q">(MyiLibrary)</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Nobody expects the Spanish Inquisition</subfield>
+      <subfield code="h">[ressource électronique] :</subfield>
+      <subfield code="b">cultural contexts in Monty Python /</subfield>
+      <subfield code="c">edited by Tomasz Dobrogoszcz ; foreword by Terry Jones.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">Lanham :</subfield>
+      <subfield code="b">Rowman &amp; Littlefield,</subfield>
+      <subfield code="c">[2014]</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">1 ressource en ligne</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Titre de l'écran-titre (visionné le 9 mars 2016).</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="6" tag="610">
+      <subfield code="a">Monty Python (Troupe d'humoristes)</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="0" tag="610">
+      <subfield code="a">Monty Python (Comedy troupe) (LCSH - aucune traduction)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">Livres numériques.</subfield>
+      <subfield code="2">rvmgf</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Dobrogoszcz, Tomasz,</subfield>
+      <subfield code="d">1970-</subfield>
+      <subfield code="e">éditeur intellectuel.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Jones, Terry,</subfield>
+      <subfield code="e">préfacier.</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">MyiLibrary</subfield>
+      <subfield code="u">http://www.myilibrary.com?id=630715</subfield>
+    </datafield>
+    <datafield ind1="4" ind2="0" tag="856">
+      <subfield code="3">Disponible par Ebook Central</subfield>
+      <subfield code="u">http://ezproxy.usherbrooke.ca/login?url=http://lib.myilibrary.com?id=630715</subfield>
+      <subfield code="z">(Accès réservé UdeS)</subfield>
+      <subfield code="z">(8 Accès)</subfield>
+    </datafield>
+  </record>
+</recordData>
+</record>
+<record>
+<recordSchema>marcxml</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+    <leader>00000cam a2200000Mi 4500</leader>
+    <controlfield tag="001">962029190</controlfield>
+    <controlfield tag="008">161103t20142014mdua   f b    001 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781442237360</subfield>
+      <subfield code="q">(rel)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1442237368</subfield>
+      <subfield code="q">(rel)</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Nobody expects the Spanish Inquisition :</subfield>
+      <subfield code="b">cultural contexts in Monty Python /</subfield>
+      <subfield code="c">edited by Tomasz Dobrogoszcz ; foreword by Terry Jones.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">Lanham (Md.) [etc] :</subfield>
+      <subfield code="b">Rowman &amp; Littlefield,</subfield>
+      <subfield code="c">cop. 2014.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">1 vol. (XIII-154 p.) :</subfield>
+      <subfield code="b">couv. ill. en coul. ;</subfield>
+      <subfield code="c">24 cm</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="7" tag="610">
+      <subfield code="a">Monty Python.</subfield>
+      <subfield code="2">ram</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Comédies loufoques (cinéma)</subfield>
+      <subfield code="z">Grande-Bretagne</subfield>
+      <subfield code="y">1960-1990</subfield>
+      <subfield code="x">Histoire et critique.</subfield>
+      <subfield code="2">ram</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Comédies loufoques (cinéma)</subfield>
+      <subfield code="z">Grande-Bretagne</subfield>
+      <subfield code="y">1990- ...</subfield>
+      <subfield code="x">Histoire et critique.</subfield>
+      <subfield code="2">ram</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Humour anglais</subfield>
+      <subfield code="x">Au cinéma.</subfield>
+      <subfield code="2">ram</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Dobrogoszcz, Tomasz.</subfield>
+      <subfield code="4">edt</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Jones, Terry,</subfield>
+      <subfield code="d">(1942- ...).</subfield>
+      <subfield code="4">aui</subfield>
+    </datafield>
+  </record>
+</recordData>
+</record>
+<record>
+<recordSchema>marcxml</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+    <leader>00000cam a2200000Mi 4500</leader>
+    <controlfield tag="001">892626793</controlfield>
+    <controlfield tag="008">140902s2014    xx       b    001 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781442237360</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1442237368</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781442237377</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1442237376</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Nobody expects the Spanish inquisition :</subfield>
+      <subfield code="b">cultural contexts in Monty Python /</subfield>
+      <subfield code="c">ed. by Tomasz Dobrogoszcz.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="a">Lanham :</subfield>
+      <subfield code="b">Rowman et Littlefield,</subfield>
+      <subfield code="c">2014.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">XIII, 154 Seiten ;</subfield>
+      <subfield code="c">24 cm</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="4" tag="610">
+      <subfield code="a">Monty Python (Comedy troupe)</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="7" tag="610">
+      <subfield code="a">Monty Python.</subfield>
+      <subfield code="0">(DE-588)811153-4</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="7" tag="650">
+      <subfield code="a">Kultur.</subfield>
+      <subfield code="0">(DE-588)4125698-0</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="655">
+      <subfield code="a">Aufsatzsammlung.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Dobrogoszcz, Tomasz.</subfield>
+    </datafield>
+  </record>
+</recordData>
+</record>
+<record>
+<recordSchema>marcxml</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+    <leader>00000cam a2200000Mc 4500</leader>
+    <controlfield tag="001">1020488020</controlfield>
+    <controlfield tag="008">180126r20142014enk     ob    000 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781442237360</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1442237368</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781442237377 (e-book)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1442237376 (e-book)</subfield>
+    </datafield>
+    <datafield ind1="0" ind2="0" tag="245">
+      <subfield code="a">Nobody expects the Spanish Inquisition :</subfield>
+      <subfield code="b">cultural contexts in Monty Python</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">Lanham, Maryland ;</subfield>
+      <subfield code="a">London, England :</subfield>
+      <subfield code="b">Rowman &amp; Littlefield Publishers,</subfield>
+      <subfield code="c">2014</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="4" tag="264">
+      <subfield code="c">2014</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">1 online resource (170 pages)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="500">
+      <subfield code="a">Restricted admission to print</subfield>
+    </datafield>
+    <datafield ind1="2" ind2="4" tag="610">
+      <subfield code="a">Monty Python (Comedy troupe)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="0" tag="650">
+      <subfield code="a">Electronic books.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="650">
+      <subfield code="a">Electronic books</subfield>
+      <subfield code="2">fast</subfield>
+      <subfield code="0">(OCoLC)fst00906854</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Dobrogoszcz, Tomasz,</subfield>
+      <subfield code="e">editor</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Jones, Terry,</subfield>
+      <subfield code="e">author of introduction, etc</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="856">
+      <subfield code="a">ebrary</subfield>
+      <subfield code="z">Campus and remote access</subfield>
+      <subfield code="u">http://esc-web.lib.cbs.dk/login?url=http://site.ebrary.com/lib/kbhnhh/Doc?id=10899146</subfield>
+      <subfield code="y">b</subfield>
+    </datafield>
+  </record>
+</recordData>
+</record>
+<record>
+<recordSchema>marcxml</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+    <leader>00000cam a2200000Mc 4500</leader>
+    <controlfield tag="001">888133677</controlfield>
+    <controlfield tag="008">140814s2014    xx      o    u000 u eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781442237360</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1442237368</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">9781442237377</subfield>
+      <subfield code="q">(Sekundärausgabe)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="a">1442237376</subfield>
+      <subfield code="q">(Sekundärausgabe)</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="100">
+      <subfield code="a">Dobrogoszcz, Tomasz</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="0" tag="245">
+      <subfield code="a">Nobody Expects the Spanish Inquisition</subfield>
+      <subfield code="b">Cultural Contexts in Monty Python</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="1" tag="264">
+      <subfield code="a">Lanham</subfield>
+      <subfield code="b">Rowman &amp; Littlefield Publishers</subfield>
+      <subfield code="c">2014</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">1 online resource (170 Seiten)</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="520">
+      <subfield code="a">This short collection of essays looks at the television show and films produced by the Monty Python troupe from a number of perspectives: &lt;br /&gt;&lt;ul start=""1"" style=""margin-top:0;margin-bottom:0;""&gt;&lt;li&gt; Gender studies &lt;/li&gt;&lt;li&gt; Post-structuralism &lt;/li&gt;&lt;li&gt; Psychoanalysis &lt;/li&gt;&lt;li&gt; Cultural studies &lt;/li&gt;&lt;/ul&gt; ...</subfield>
+    </datafield>
+    <datafield ind1=" " ind2="7" tag="655">
+      <subfield code="a">Online-Publikation.</subfield>
+      <subfield code="2">gnd</subfield>
+    </datafield>
+  </record>
+</recordData>
+</record>
+<record>
+<recordSchema>marcxml</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<record xmlns="http://www.loc.gov/MARC21/slim">
+    <leader>00000cam a2200000M  4500</leader>
+    <controlfield tag="001">1026964297</controlfield>
+    <controlfield tag="008">180124nuuuuuuuuxx      o     000 0 eng d</controlfield>
+    <datafield ind1=" " ind2=" " tag="020">
+      <subfield code="z">1442237368</subfield>
+      <subfield code="q">(print)</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="100">
+      <subfield code="a">Jones, Terry.</subfield>
+    </datafield>
+    <datafield ind1="1" ind2="0" tag="245">
+      <subfield code="a">Nobody Expects the Spanish Inquisition</subfield>
+      <subfield code="h">[Elektronisk resurs].</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="260">
+      <subfield code="b">Rowman &amp; Littlefield Publishers.</subfield>
+    </datafield>
+    <datafield ind1=" " ind2=" " tag="300">
+      <subfield code="a">1 online resource</subfield>
+    </datafield>
+    <datafield ind1="1" ind2=" " tag="700">
+      <subfield code="a">Dobrogoszcz, Tomasz.</subfield>
+    </datafield>
+  </record>
+</recordData>
+</record>
+</records>
+<nextRecordPosition/>
+<resultSetIdleTime/>
+<echoedSearchRetrieveRequest xmlns:srw="http://www.loc.gov/zing/srw/">
+<version>1.1</version>
+<query>srw.bn=9781442237360</query>
+<maximumRecords>10</maximumRecords>
+<recordPacking>xml</recordPacking>
+<startRecord>1</startRecord>
+<sortKeys>relevance</sortKeys>
+<wskey>u50CPHhMV19la1NF7ix4xkp1SzLPnb260HhvSw2DRANGFgrw6tEWImxfqAQV2PaqVeHj9cxYpwAeT6jV</wskey>
+<frbrGrouping>off</frbrGrouping>
+</echoedSearchRetrieveRequest>
+</searchRetrieveResponse>

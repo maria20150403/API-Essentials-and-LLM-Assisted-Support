@@ -19,7 +19,7 @@ OpenRefine has built-in functions for accessing data through APIs. We can use th
 
 ![Screenshot of OpenRefine](../assets/img/OR_Fetch_URL.png)
 
-We will be using the data in File1.xlsx. The column named 'ISBN' contains ISBN numbers we can use to search the VOyager API. We can request the catalog data about the resource and add that data to our Excel file. 
+We will be using the data in File1.xlsx. The column named 'ISBN' contains ISBNs we can use to search the Voyager API. We can request the catalog data about the resource and add that data to our Excel file. 
 
 >## Let's fetch data from Voyager
 >
@@ -56,11 +56,11 @@ Our Voyager API query returns results in JSON format as a single cell in our exc
 
 >## Let's find the Call Number
 >
->Let's pull out the Call Number form our JSON results and add it to a new column called _CallNo_:
+>Let's pull out the Publisher form our JSON results and add it to a new column called _Publisher_:
 >1. Select _VoyagerData_ -> 'Edit column' -> 'Add column based on this column...'
->2. New column name: _CallNo_
->3. Add the expression: `value.parseJson().record[0].items[0].callno`
->4. Click 'OK'. We should have a new column in out data now. 
+>2. New column name: _Publisher_
+>3. Add the expression: `value.parseJson().record[0].publisher`
+>4. Click 'OK'. We should have a new column in our data with the publisher for each item. 
 {: .checklist}
 
 >## Create a link to the catalog record 
@@ -86,14 +86,14 @@ Many times when working with JSON or XML results, we need to work with an array 
 
 >## Return a JSON array or list
 >
->Let's work with an array of data in JSON. We will find the status of each item in the record and save those values in a new column.
+>Let's work with an array of data in JSON. We will find the location of each item in the record and save those values in a new column.
 >1. Select _VoyagerData_ -> 'Edit column' -> 'Add column based on this column...'
->2. New column name: _ItemStatus_
->3. Add the expression: `forEach(value.parseJson().record[0].items,v,v.itemstatus).join(" | ")`
+>2. New column name: _Location_
+>3. Add the expression: `forEach(value.parseJson().record[0].items,v,v.loccode).join(" | ")`
 > - `forEach()` takes 3 arguements: an array, a variable, and variable.function()
 >  - `value.parseJson().record[0].items` is our array
 >  - `v` is our variable
->  - `v.v.itemstatus` is our function	
+>  - `v.loccode` is our function	
 >4. Click 'OK'. We should have a new column in our data with an array of values.
 {: .checklist}
 
