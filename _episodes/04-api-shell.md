@@ -23,9 +23,9 @@ Building on the skill from [Unix shell](https://librarycarpentry.org/lc-shell/) 
 
 - `curl`   - A command line tool for transferring data from URLs
 - `jq`  - A commandline JSON processor
-- `xmllint`  - A command line XML parser
+- `xmlstarlet`  - A command line XML parser
 
-In this lesson we will use `curl` command for interacting with our API endpoints and either `jq` or `xmllint` to process the return based on the type response that is given by the endpoint.  In both cases we use the Unix shell pipe `|` to redirect the output of the `curl` command into the next for processing.
+In this lesson we will use `curl` command for interacting with our API endpoints and either `jq` or `xmlstarlet` to process the return based on the type response that is given by the endpoint.  In both cases we use the Unix shell pipe `|` to redirect the output of the `curl` command into the next for processing.
 
 ## API `Get` Requests  
 A tool for transfering data via URL, the `curl  ` command allows use to interact with API endpoints from the command line.  A full-featured tool, the `curl` command  has built-in functionality to work with *most* types of API endpoint and authenitication schemes.  While our examples using the Yale University Library Voyager API is does not require authentication, the full manual of usage options are available on the command line by entering `man curl`
@@ -174,10 +174,11 @@ $ curl https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953
 
 Converting response from Voyager API to text, select element
 
-#### Pretty-print with `xmllint`
+#### Pretty-print with `xmlstarlet`
 
 ~~~
-$ curl https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953 | xmllint --format -
+$ curl -s https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953 | xmlstarlet format --indent-tab
+
 ~~~
 {: .bash}
 ~~~
@@ -287,6 +288,24 @@ $ curl https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953 |
 ~~~
 {: .output}
 
+### Filter by Element Tag
+XPath can be used along with `xmlstarlet` to select the values of a specified element.  This allows for specific pieces of data, from the overall XML document to be filtered and returned.  
+
+In this example, we return just the subject headings from the MARCXML record:
+
+
+~~~
+$ curl -s https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953 | xmlstarlet  sel -t -v '//*[@tag="650"]//text()' 
+~~~
+{: .bash}
+
+~~~
+Animism.
+Anthropology of religion.
+Life.
+~~~
+{: .output}
+
 ## Automating with Loops
 
 Loops are a powerful method for working with APIs using the shell tools.  Building on the [Automating the tedious with loops ](https://librarycarpentry.org/lc-shell/04-loops/index.html)Lesson from yesterday, we can extract specified by making mulitple API calls.  
@@ -299,5 +318,76 @@ $ cat isbn.txt | while read line;
     done
 ~~~
 {: .bash}
+
+Let's breakdown this command and examine what function each piece is performing.  
+
+First we will need a file contataining a list of ISBN numbers which we will pass to the Voyager API to identify which items we would like bibliographic information about.  
+
+For example, we could create a text file named `isbn.txt` with the following values:
+
+~~~
+9780415704953
+9782745327338
+9781780232652
+9788492865895
+9781847088611
+9788415824770
+9781780767994
+9788415900351
+9784642038263
+9781620403402
+9784585290667
+9780434022748
+9784751745106
+9784642034623
+9784642034616
+9788401342059
+9780297868507
+9788415906285
+9784140093542
+9788466654135
+9788483838020
+9788415451310
+9781780721538
+9781780743769
+9788496632950
+9788401342103
+9784642064583
+9780241965627
+9788494127021
+9780224098038
+~~~
+
+>## Create a file of ISBN ids 
+>
+>1. Create a new file with the above ISBN ids. What steps did you take?
+
+>
+>>## Solution
+>>1. Open the shell command line interface
+>>2. Open a text editor, such as `nano`, with the file name as the only argument
+>>`$ nano isbn.txt`
+>>3. Paste list of ISBN ids from above
+>>4. Use `CTRL o` to save the file and `CTRL x` to exit the editor. 
+>{: .solution}
+{: .challenge}
+
+
+`$ cat isbn.txt |`
+
+We use the `cat` command to read the contents of the file, followed by the pipe symbol to send to the next part of our command:
+
+`while read line;`
+
+The `while` keyword initiates a loop to that uses the `read` command to assign the content of each line in the text file to the variable `line`, one line at a time.  Similar to a `for` loop, the while loop repeats this action, in this case, until all lines in the file have been read.  
+
+`do curl -s https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=$line | `
+
+In the body of the loop, we use our `curl` command to query the Voyager API endpoint.  We call this command using the `$line` variable in place of the isbn number in the URL, this allows for the value read from the text file be subsituted in each iteration of the loop.  We then pipe the API response to the final part of our command:
+
+`jq '.record[].title'; done `
+
+This portion of the command uses the `jq` tool to select the title for the JSON returned for each item.
+
 
 
