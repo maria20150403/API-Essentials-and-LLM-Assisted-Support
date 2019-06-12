@@ -64,6 +64,7 @@ The E-utilities are made up of 9 programs that provide access to Entrez. You can
 > 2. Identify how you will conceptualize and categorize racial/ethnic groupings for this task.
 > - NIH racial and ethnic categories include American Indian or Alaska Native, Asian, Black or African American, Hispanic or Latino, Native Hawaiian or Other Pacific Islander, and White. (See NOT-OD-15-089)[https://grants.nih.gov/grants/guide/notice-files/not-od-15-089.html] for more details.
 > 3. Write and run the API strings that would enable you to uncover these representations. 
+>
 >>## Solution
 >> Here is an example of API calls that could provide you with summary data based on NIH racial and ethnic categories. (There are many potential solutions to this exercise!) 
 >>1. https://eutils.ncbi.nlm.nih.gov/gquery?term=african+AND+black&retmode=xml
@@ -80,6 +81,7 @@ The E-utilities are made up of 9 programs that provide access to Entrez. You can
 > 1. Which E-utilitiy would provide you with the type of data you could use to answer your question?
 > 2. Which databases would you need to query with your choses E-utility in order to answer your research question?
 > 3. Try writing the APIs that would provide you with the data that would answer your research question!
+>
 >>## Solution
 >>- Did it work?
 >>1. If it worked, please share your API calls in the etherpad by your research question.
