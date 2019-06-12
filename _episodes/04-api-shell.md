@@ -287,6 +287,17 @@ $ curl https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953 |
 ~~~
 {: .output}
 
-## 
-Pipe to other shell tools, create csv, loop?
+## Automating with Loops
+
+Loops are a powerful method for working with APIs using the shell tools.  Building on the [Automating the tedious with loops ](https://librarycarpentry.org/lc-shell/04-loops/index.html)Lesson from yesterday, we can extract specified by making mulitple API calls.  
+
+In the example below, we pipe `|` together several shell commands and introduce the `while` loop to call the Voyager API and return the title for a list of items.  
+
+~~~
+$ cat isbn.txt | while read line; 
+    do curl -s https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=$line  | jq '.record[].title'; 
+    done
+~~~
+{: .bash}
+
 
