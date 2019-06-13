@@ -121,7 +121,7 @@ Our Voyager API query returns reults in MARCXML format for each item in a single
 >## Parse MARCXML results
 > We need to parse the MARCXML to pull out data about each item. 
 > The steps below will walk through creating a new column that contains the Call Number for each item in our dataset.
->1. >1. Create a new project using the file [File1-VoaygerMARC.xlsx](https://github.com/JoshuaDull/APIs-for-Libraries/raw/gh-pages/data/File1-VoaygerMARC.xlsx)
+>1. Create a new project using the file [File1-VoaygerMARC.xlsx](https://github.com/JoshuaDull/APIs-for-Libraries/raw/gh-pages/data/File1-VoaygerMARC.xlsx)
 >1. Select column _MARCXML_ -> 'Edit column' -> 'Add column based on this column...'
 >2. Name new column: _CallNo_
 >3. Add the expression (don't click OK yet): `value.parseXml().select("datafield[tag=050]")`
