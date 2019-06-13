@@ -68,10 +68,15 @@ The E-utilities are made up of 9 programs that provide access to Entrez. You can
 
 >## Getting Database Statistics and Search Fields
 >einfo.fcgi?db=<database>
+ >
 >Input: Entrez database (&db)
+ >
 >Output: XML containing database statistics
+ >
 >Note: If no database parameter is supplied, einfo will return a list of all valid Entrez databases.
+ >
 >Example: Find database statistics for Entrez Protein.
+ >
 >https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=protein 
 > 
 {: .checklist}
