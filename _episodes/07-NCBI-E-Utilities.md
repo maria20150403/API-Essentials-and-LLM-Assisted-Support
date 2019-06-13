@@ -44,7 +44,7 @@ The E-utilities are made up of 9 programs that provide access to Entrez. You can
 - [Entrez Programming Utilities Help](https://www.ncbi.nlm.nih.gov/books/NBK25501/) 
 
 >## Basic Searching
->esearch.fcgi?db=<database>&term=<query>
+>API string: esearch.fcgi?db=<database>&term=<query>
 >
 >Input: Entrez database (&db); Any Entrez text query (&term)
  >
@@ -57,8 +57,10 @@ The E-utilities are made up of 9 programs that provide access to Entrez. You can
 {: .checklist}
   
 >## Basic Downloading
->efetch.fcgi?db=<database>&id=<uid_list>&rettype=<retrieval_type>&retmode=<retrieval_mode>
+>API string: efetch.fcgi?db=<database>&id=<uid_list>&rettype=<retrieval_type>&retmode=<retrieval_mode>
+ >
 >Input: List of UIDs (&id); Entrez database (&db); Retrieval type (&rettype); Retrieval mode (&retmode)
+ >
 >Output: Formatted data records as specified
 >
 >Example: Download nuccore GIs 34577062 and 24475906 in FASTA format
@@ -67,7 +69,7 @@ The E-utilities are made up of 9 programs that provide access to Entrez. You can
 {: .checklist}
 
 >## Getting Database Statistics and Search Fields
->einfo.fcgi?db=<database>
+>API string: einfo.fcgi?db=<database>
  >
 >Input: Entrez database (&db)
  >
