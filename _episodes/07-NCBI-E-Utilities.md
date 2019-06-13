@@ -43,6 +43,25 @@ The E-utilities are made up of 9 programs that provide access to Entrez. You can
 #### E-utilities Documentation
 - [Entrez Programming Utilities Help](https://www.ncbi.nlm.nih.gov/books/NBK25501/) 
 
+>## Basic Searching
+>esearch.fcgi?db=<database>&term=<query>
+>Input: Entrez database (&db); Any Entrez text query (&term)
+>Output: List of UIDs matching the Entrez query
+>
+> Example: Get the PubMed IDs (PMIDs) for articles about breast cancer published in Science in 2008
+>https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science[journal]+AND+breast+cancer+AND+2008[pdat] 
+> 
+{: .checklist}
+  
+>## Basic Downloading
+>efetch.fcgi?db=<database>&id=<uid_list>&rettype=<retrieval_type>&retmode=<retrieval_mode>
+>Input: List of UIDs (&id); Entrez database (&db); Retrieval type (&rettype); Retrieval mode (&retmode)
+>Output: Formatted data records as specified
+>
+>Example: Download nuccore GIs 34577062 and 24475906 in FASTA format
+>https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=34577062,24475906&rettype=fasta&retmode=text 
+> 
+{: .checklist}
 
 >## Find Pubmed articles 
 > Use E-utility ESearch to perform a search about the condition Cold Uricaria in PubMed where the results meet the following parameters: 
