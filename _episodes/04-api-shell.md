@@ -4,7 +4,7 @@ teaching: 10
 exercises: 10
 questions:
 - "How do I fetch data from API's using the Unix shell?"
-- "How do I process API responses to get plain text, usable by standardf Unix shell tools?"
+- "How do I process API responses to get plain text, usable by standard Unix shell tools?"
 objectives:
 - "Understand how to fetch data from APIs using the Unix shell"
 - "Choose and operate tools to convert API response to plain text"
@@ -15,23 +15,23 @@ keypoints:
 
 ## Fetching data from the web
 
-With a [URL query](https://joshuadull.github.io/APIs-for-Libraries/03-Creating-url-queries/index.html) in hand, the [Unix shell](https://librarycarpentry.org/lc-shell/) provides a powerful commandline driven interface for processing and interacting with large amounts of text data.  As the response from many APIs will be in a text-based format, such as JSON or XML, various shell tools will provide us with the functionality  to acquire data and process the response, allowing for easy use of the large existing set of Unix tools.
+With a [URL query](https://joshuadull.github.io/APIs-for-Libraries/03-Creating-url-queries/index.html) in hand, the [Unix shell](https://librarycarpentry.org/lc-shell/) provides a powerful command line driven interface for processing and interacting with large amounts of text data.  As the response from many APIs will be in a text-based format, such as JSON or XML, various shell tools will provide us with the functionality  to acquire data and process the response, allowing for easy use of the large existing set of Unix tools.
 
 
 ## Shell Tools  
-Building on the skill from [Unix shell](https://librarycarpentry.org/lc-shell/) lesson, we add the following commandline programs for working with APIs
+Building on the skill from [Unix shell](https://librarycarpentry.org/lc-shell/) lesson, we add the following command line programs for working with APIs
 
 - `curl`   - A command line tool for transferring data from URLs
-- `jq`  - A commandline JSON processor
+- `jq`  - A command line JSON processor
 - `xmlstarlet`  - A command line XML parser
 
 In this lesson we will use `curl` command for interacting with our API endpoints and either `jq` or `xmlstarlet` to process the return based on the type response that is given by the endpoint.  In both cases we use the Unix shell pipe `|` to redirect the output of the `curl` command into the next for processing.
 
 ## API `Get` Requests  
-A tool for transfering data via URL, the `curl  ` command allows use to interact with API endpoints from the command line.  A full-featured tool, the `curl` command  has built-in functionality to work with *most* types of API endpoint and authenitication schemes.  While our examples using the Yale University Library Voyager API is does not require authentication, the full manual of usage options are available on the command line by entering `man curl`
+A tool for transferring data via URL, the `curl  ` command allows use to interact with API endpoints from the command line.  A full-featured tool, the `curl` command  has built-in functionality to work with *most* types of API endpoint and authentication schemes.  While our examples using the Yale University Library Voyager API is does not require authentication, the full manual of usage options are available on the command line by entering `man curl`
  
 
-Using the Voyager API we enter the command `curl` followed the URL for the Bibliographic item with the isbn 9780415704953 
+Using the Voyager API we enter the command `curl` followed the URL for the Bibliographic item with the ISBN 9780415704953 
 
 ~~~
 $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953
@@ -76,7 +76,7 @@ This example uses the `wc`` command with the `-l` option to count the number of 
 
 ## JSON filtering with `jq`
 
-The `jq` command transforms JSON content through selection and filtering.  Using the Unix shell "pipe" `|` allows us to take the API response that we recieve from our `curl` command, and process it in varoius ways with `jq`  
+The `jq` command transforms JSON content through selection and filtering.  Using the Unix shell "pipe" `|` allows us to take the API response that we receive from our `curl` command, and process it in various ways with `jq`  
 
 
  
@@ -145,7 +145,7 @@ $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  
 Since the Voyager API JSON response begins with the root "record" key, with use the element key `.record` followed by the open and close square brackets`[]` to put all of the child elements in an array, the final selector is the `.title` to select all of the title elements for items in the this JSON response.
 
 
-We can specific multiple keys in a single filter, In this example, we return the title and author by specificy both keys, seperated by a comma.
+We can specific multiple keys in a single filter, In this example, we return the title and author by specified both keys, separated by a comma.
 ~~~
 $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.record[]., .record[].author '
 
@@ -308,12 +308,12 @@ Life.
 
 ## Automating with Loops
 
-Loops are a powerful method for working with APIs using the shell tools.  Building on the [Automating the tedious with loops ](https://librarycarpentry.org/lc-shell/04-loops/index.html)Lesson from yesterday, we can extract specified by making mulitple API calls.  
+Loops are a powerful method for working with APIs using the shell tools.  Building on the [Automating the tedious with loops ](https://librarycarpentry.org/lc-shell/04-loops/index.html)Lesson from yesterday, we can extract specified by making multiple API calls.  
 
 In the example below, we pipe `|` together several shell commands and introduce the `while` loop to call the Voyager API and return the title for a list of items.  
 
 ~~~
-$ cat isbn.txt | while read line; 
+$ cat ISBN.txt | while read line; 
     do curl -s https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=$line  | jq '.record[].title'; 
     done
 ~~~
@@ -321,57 +321,7 @@ $ cat isbn.txt | while read line;
 
 Let's breakdown this command and examine what function each piece is performing.  
 
-First we will need a file contataining a list of ISBN numbers which we will pass to the Voyager API to identify which items we would like bibliographic information about.  
-
-For example, we could create a text file named `isbn.txt` with the following values:
-
-~~~
-9780415704953
-9782745327338
-9781780232652
-9788492865895
-9781847088611
-9788415824770
-9781780767994
-9788415900351
-9784642038263
-9781620403402
-9784585290667
-9780434022748
-9784751745106
-9784642034623
-9784642034616
-9788401342059
-9780297868507
-9788415906285
-9784140093542
-9788466654135
-9788483838020
-9788415451310
-9781780721538
-9781780743769
-9788496632950
-9788401342103
-9784642064583
-9780241965627
-9788494127021
-9780224098038
-~~~
-
->## Create a file of ISBN ids 
->
->1. Create a new file with the above ISBN ids. What steps did you take?
-
->
->>## Solution
->>1. Open the shell command line interface
->>2. Open a text editor, such as `nano`, with the file name as the only argument
->>`$ nano isbn.txt`
->>3. Paste list of ISBN ids from above
->>4. Use `CTRL o` to save the file and `CTRL x` to exit the editor. 
->{: .solution}
-{: .challenge}
-
+First we will need a file containing a list of ISBN numbers which we will pass to the Voyager API to identify which items we would like bibliographic information about.  
 
 `$ cat isbn.txt |`
 
@@ -383,7 +333,7 @@ The `while` keyword initiates a loop to that uses the `read` command to assign t
 
 `do curl -s https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=$line | `
 
-In the body of the loop, we use our `curl` command to query the Voyager API endpoint.  We call this command using the `$line` variable in place of the isbn number in the URL, this allows for the value read from the text file be subsituted in each iteration of the loop.  We then pipe the API response to the final part of our command:
+In the body of the loop, we use our `curl` command to query the Voyager API endpoint.  We call this command using the `$line` variable in place of the ISBN number in the URL, this allows for the value read from the text file be substituted in each iteration of the loop.  We then pipe the API response to the final part of our command:
 
 `jq '.record[].title'; done `
 
