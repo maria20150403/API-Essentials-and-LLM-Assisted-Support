@@ -70,7 +70,7 @@ There are two data sets:
 
 2. [Sample Publication Data Excel](https://github.com/JoshuaDull/APIs-for-Libraries/raw/gh-pages/data/File1.xlsx) should download the Excel file autmoatically to your default downloads location.
 
-3. [Sample Publication Data CSV](https://github.com/JoshuaDull/APIs-for-Libraries/raw/gh-pages/data/items.csv). Same data as file above, but in csv format. To be used with the Shell exercises in part 08. 
+3. [ISBN List](https://github.com/JoshuaDull/APIs-for-Libraries/raw/gh-pages/data/isbn.txt) is a text file with an ISBN on each line; we'll use this for Day-2, Lesson 8. 
 
 
 [template]: {{ site.workshop_repo }}
