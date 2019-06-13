@@ -1,5 +1,5 @@
 ---
-title: "Excercise: NCBI E-utilities"
+title: "Exercise: NCBI E-utilities"
 teaching: 
 - "5"
 exercises: 
