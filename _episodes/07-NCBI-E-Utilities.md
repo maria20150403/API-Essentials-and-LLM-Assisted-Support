@@ -22,7 +22,7 @@ Entrez is a molecular biology database system that provides integrated access to
 Entrez is NCBI's primary text search and retreival system that integrates the PubMed database of biomedical literature with 38 other literature and molecular databases
 
 The web based search interface for these NCBI databases is avaiable to the public [here, through the U.S. National Library of Medicine](http://www.ncbi.nlm.nih.gov/Entrez/).
->
+
 #### Databases included in Entrez
 [You can find a full list of Entrez databases listed here](https://www.ncbi.nlm.nih.gov/books/NBK3837/).
 
