@@ -109,7 +109,7 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 >2. Create a text file named 520.txt that contains the Summary field (520) for each of the records in our MARCXML. What command did you use?
 >
 >>## Solution
->>1. curl "http://www.worldcat.org/webservices/catalog/search/sru?wskey={API.KEY}&query=srw.bn=9781442237360&frbrGrouping=off" > output.xml
+>>1. `curl "http://www.worldcat.org/webservices/catalog/search/sru?wskey={API.KEY}&query=srw.bn=9781442237360&frbrGrouping=off" > output.xml`
 >>2. `curl "http://www.worldcat.org/webservices/catalog/search/sru?wskey={API.KEY}&query=srw.bn=9781442237360&frbrGrouping=off" | xmlstarlet  sel -t -v '//*[@tag="520"]//text()' > 520.txt`
 >{: .solution}
 {: .challenge}
@@ -117,10 +117,10 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 >## More advanced queries in Shell 
 > We worked on retrieving one result at a time in the Shell, but we can scale up this process using loops. Please download/use the file [_isbn.txt_](https://github.com/JoshuaDull/APIs-for-Libraries/raw/gh-pages/data/isbn.txt) for this exercise.
 >1. Write a loop in BASH that will open the file _isbn.txt_, query for each ISBN, and save each result as a unique MARCXML file.
->2. Write a command that will open the file _isbn.txt_, query for each ISBN, and save the subject headings in a single file called _subjects.txt_.
+>2. Write a command that will open the file _isbn.txt_, query for each ISBN, and save the subject headings in a single file called _subjects.txt_ (hint: append a file).
 >
 >>## Solution
 >>1. `cat isbn.txt | while read isbn; do  curl "http://www.worldcat.org/webservices/catalog/search/sru?wskey={API.KEY}&frbrGrouping=off&query=srw.bn=$isbn" > $isbn.xml; done`
->>2. `cat isbn.txt | while read isbn; do  curl "http://www.worldcat.org/webservices/catalog/search/sru?wskey={API>KEY}&frbrGrouping=off&query=srw.bn=$isbn" | xmlstarlet  sel -t -v '//*[@tag="650"]//text()' >> subjects.txt; done`
+>>2. `cat isbn.txt | while read isbn; do  curl "http://www.worldcat.org/webservices/catalog/search/sru?wskey={API.KEY}&frbrGrouping=off&query=srw.bn=$isbn" | xmlstarlet  sel -t -v '//*[@tag="650"]//text()' >> subjects.txt; done`
 >{: .solution}
 {: .challenge}

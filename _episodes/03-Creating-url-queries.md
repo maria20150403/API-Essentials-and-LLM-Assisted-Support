@@ -32,6 +32,7 @@ keypoints:
 - Look through the params
     - What types of search parameters are available?
     - Do they match what you need?
+    - What is the Endpoint (Base URL)?
 - Look for sample requests & responses
     - What kind of data does it return?
     - Is it what you’re looking for?
@@ -44,7 +45,7 @@ keypoints:
 ## Creating a Query
 - National Weather Service API
     - Documentation: [https://forecast-v3.weather.gov/documentation?redirect=legacy](https://forecast-v3.weather.gov/documentation?redirect=legacy)
-    - Base URL: https://api.weather.gov
+    - Endpoint/Base URL: https://api.weather.gov
 
 >## Let’s create a query 
 > Run this query: https://api.weather.gov/stations?limit=10&state=CT
@@ -58,19 +59,4 @@ keypoints:
 >>3. https://api.weather.gov/alerts?active=1&area=CA or https://api.weather.gov/alerts/active?area=CA or https://api.weather.gov/alerts/active/area/CA
 >{: .solution}
 {: .challenge}
-
-## Creating a Query (Yale Courses API)
-
-Look up courses in **English Language and Literature** for **the fall term of 2017** :
-
-![Yale course URL](../assets/img/YaleCourseFull.png)
-
-
->## Write your own Query
->
->1. Pick a Subject: [http://catalog.yale.edu/ycps/subject-abbreviations/](http://catalog.yale.edu/ycps/subject-abbreviations/) 
->2. Use Yale Courses API documentation to create your own query
->3. Record your query in the etherpad. We’ll test your queries together!
-{: .checklist}
-![Test question](../assets/img/YaleCourseBase.png)
 
