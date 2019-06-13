@@ -64,6 +64,7 @@ The E-utilities are made up of 9 programs that provide access to Entrez. You can
 >Output: Formatted data records as specified
 >
 >Example: Download nuccore GIs 34577062 and 24475906 in FASTA format
+ >
 >https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=34577062,24475906&rettype=fasta&retmode=text 
 > 
 {: .checklist}
