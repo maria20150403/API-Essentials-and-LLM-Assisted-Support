@@ -106,19 +106,21 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 >## Fetch MARCXML results (Shell) 
 >
 >1. Use the query written in the first exercise to pull the MARCXML for the item with the ISBN _9781442237360_. Run this query in the shell and save the MARCXML results as a file. What commands did you use? (hint: put your query URL in "quotes")
+>2. Create a text file named 520.txt that contains the Summary field (520) for each of the records in our XML. What command did you use?
 >
 >>## Solution
 >>1. curl "http://www.worldcat.org/webservices/catalog/search/sru?wskey={API.KEY}&query=srw.bn=9781442237360&frbrGrouping=off" > output.xml
+>>2. `curl "http://www.worldcat.org/webservices/catalog/search/sru?wskey=u50CPHhMV19la1NF7ix4xkp1SzLPnb260HhvSw2DRANGFgrw6tEWImxfqAQV2PaqVeHj9cxYpwAeT6jV&query=srw.bn=9781442237360&frbrGrouping=off" | xmlstarlet  sel -t -v '//*[@tag="520"]//text()' > 520.txt`
 >{: .solution}
 {: .challenge}
 
->## More queries in Shell 
-> We worked on retrieving one result at a time in the Shell, but we can scale up this process using loops. Please download/use the file [_items.csv_](https://github.com/JoshuaDull/APIs-for-Libraries/raw/gh-pages/data/items.csv) for this exercise.
->1. Write a `for` loop that will open the file _items.csv_, query for each ISBN, and save each result as a XML file.
->2. Write a command that will open the file _items.csv_, query for each ISBN, and save each title in a single file called _titles.csv_.
->3. Write a command that will open the file _items.csv_, query only for items Yale has a copy (Yale Library holdings), and return a MARCXML file for each of the Yale holdings. 
+>## More advanced queries in Shell 
+> We worked on retrieving one result at a time in the Shell, but we can scale up this process using loops. Please download/use the file [_isbn.txt_](https://github.com/JoshuaDull/APIs-for-Libraries/raw/gh-pages/data/isbn.txt) for this exercise.
+>1. Write a loop in BASH that will open the file _isbn.txt_, query for each ISBN, and save each result as a XML file.
+>2. Write a command that will open the file _isbn.txt_, query for each ISBN, and save the subject headings in a single file called _titles.txt_.
 >
 >>## Solution
->>1. 	 
+>>1. `cat isbn.txt | while read line; do  curl "http://www.worldcat.org/webservices/catalog/search/sru?wskey=u50CPHhMV19la1NF7ix4xkp1SzLPnb260HhvSw2DRANGFgrw6tEWImxfqAQV2PaqVeHj9cxYpwAeT6jV&frbrGrouping=off&query=srw.bn=$line" > $line.xml; done`
+>>2. `cat isbn.txt | while read line; do  curl "http://www.worldcat.org/webservices/catalog/search/sru?wskey=u50CPHhMV19la1NF7ix4xkp1SzLPnb260HhvSw2DRANGFgrw6tEWImxfqAQV2PaqVeHj9cxYpwAeT6jV&frbrGrouping=off&query=srw.bn=$line" | xmlstarlet  sel -t -v '//*[@tag="650"]//text()' > $line.txt; done`
 >{: .solution}
 {: .challenge}
