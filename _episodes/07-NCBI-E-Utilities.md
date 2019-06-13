@@ -71,7 +71,7 @@ The E-utilities are made up of 9 programs that provide access to Entrez. You can
 > Perform a global Entrez search to determine racial/ethnic representation across database contents. 
 > 1. Identify which E-utility to use for this task.
 > 2. Identify how you will conceptualize and categorize racial/ethnic groupings for this task.
-> - NIH racial and ethnic categories include American Indian or Alaska Native, Asian, Black or African American, Hispanic or Latino, Native Hawaiian or Other Pacific Islander, and White. (See NOT-OD-15-089)[https://grants.nih.gov/grants/guide/notice-files/not-od-15-089.html] for more details.
+> - NIH racial and ethnic categories include American Indian or Alaska Native, Asian, Black or African American, Hispanic or Latino, Native Hawaiian or Other Pacific Islander, and White. [See NOT-OD-15-089](https://grants.nih.gov/grants/guide/notice-files/not-od-15-089.html) for more details.
 > 3. Write and run the API strings that would enable you to uncover these representations. 
 >
 >>## Solution
