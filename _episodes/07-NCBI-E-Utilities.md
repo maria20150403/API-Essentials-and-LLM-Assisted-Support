@@ -55,11 +55,11 @@ The E-utilities are made up of 9 programs that provide access to Entrez. You can
 {: .challenge}
 
 >## Gather statistics on an Entrez database
-> Description
+> 
 > 1. Identify the E-utility you would use to complete this task.
 > 2. Identify the database you would like to view the statistics for.
 > 3. Write the API call.
-
+>
 >>## Solution
 >>- Here is an example solution:
 >>1. https://eutils.ncbi.nlm.nih.gov/entrez/eutils/einfo.fcgi?db=pubmed
