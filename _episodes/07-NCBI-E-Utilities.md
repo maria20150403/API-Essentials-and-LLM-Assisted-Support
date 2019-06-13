@@ -45,10 +45,13 @@ The E-utilities are made up of 9 programs that provide access to Entrez. You can
 
 >## Basic Searching
 >esearch.fcgi?db=<database>&term=<query>
+>
 >Input: Entrez database (&db); Any Entrez text query (&term)
+ >
 >Output: List of UIDs matching the Entrez query
 >
 > Example: Get the PubMed IDs (PMIDs) for articles about breast cancer published in Science in 2008
+  >
 >https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=science[journal]+AND+breast+cancer+AND+2008[pdat] 
 > 
 {: .checklist}
