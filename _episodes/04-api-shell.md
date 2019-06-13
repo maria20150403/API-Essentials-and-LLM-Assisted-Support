@@ -134,7 +134,7 @@ $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  
 
 In this example, we return just the title.
 ~~~
-$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.record[].title''
+$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.record[].title'
 ~~~
 {: .bash}
 ~~~
@@ -147,7 +147,7 @@ Since the Voyager API JSON response begins with the root "record" key, with use 
 
 We can specific multiple keys in a single filter, In this example, we return the title and author by specified both keys, separated by a comma.
 ~~~
-$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.record[]., .record[].author '
+$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.record[].title, .record[].author'
 
 ~~~
 {: .bash}
