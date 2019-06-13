@@ -14,7 +14,7 @@ keypoints:
 - "By linking to the NCBI Entrez system through the E-utilities, you can make complicated data requests across a huge dataset."
 ---
 ## Background Information
->
+
 #### Entrez Molecular Sequence Database System (Entrez)
 
 Entrez is a molecular biology database system that provides integrated access to nucleotide and protein sequence data, genomic mapping informaiton, 3D structure data, PubMed MEDLINE, and more. This system is produced by the National Center for Biotechnology Information (NCBI). 
@@ -25,7 +25,7 @@ The web based search interface for these NCBI databases is avaiable to the publi
 >
 #### Databases included in Entrez
 [You can find a full list of Entrez databases listed here](https://www.ncbi.nlm.nih.gov/books/NBK3837/).
->
+
 #### Entrez Programming Utilities (E-utilities)
 The E-utilities are made up of 9 programs that provide access to Entrez. You can find a list of these 9 programs in the table below. The information shown in this table was taken from [Eric Sayers A General Introduction to the E-utilities](https://www.ncbi.nlm.nih.gov/books/NBK25497/).
 
@@ -40,7 +40,7 @@ The E-utilities are made up of 9 programs that provide access to Entrez. You can
 | EGQuery | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/egquery.fcgi | Responds to a text query with the number of records matching the query in each Entrez database. |
 | ESpell | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/espell.fcgi | Retrieves spelling suggestions for a text query in a given database. | 
 | ECitMatch | https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ecitmatch.cgi | Retrieves PubMed IDs (PMIDs) corresponding to a set of input citation strings. |
->
+
 #### E-utilities Documentation
 - [Entrez Programming Utilities Help](https://www.ncbi.nlm.nih.gov/books/NBK25501/) 
 
