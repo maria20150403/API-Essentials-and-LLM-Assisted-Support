@@ -52,7 +52,7 @@ In addition to the functions we've already covered in the [OpenRefine Lesson](ht
 
 >## Fetch MARCXML results (OpenRefine)
 >We'll start by using the query you wrote in the previous exercise, but expand it to query our csv of titles & ISBNs.
-> - Create a new project in OpenRefine using the provided data. You should have 2 columns: Title & ISBN.
+> - Create a new project in OpenRefine using the provided data. You should have 1 column: ISBN.
 > - Add a new column called _fetchOCLC_ that contains the full MARCXML record for each title. 
 >1. What steps did you take to create column _fetchOCLC_?
 >2. How did you change your query to work in OpenRefine?
@@ -90,7 +90,7 @@ Now that we fetched data from our API, we need to parse the resulting XML to pul
 > We worked through the previous example together, this time you're on your own. Figure out how to answer the questions below using the provided data and the OCLC API. 
 >1. Create a column with each callNo associated with the ISBN. What expression did you use? (Bonus if you can include only the unique callNos in your results)
 >2. Create a column with the number of records returned for each ISBN. Which title returns the most records?
->3. Write and run a query that will return only the OCLC MARCXML records for each item that Yale has a copy (Yale Library holdings). Record your query in the etherpad.
+>3. Write and run a query that will return only the OCLC MARCXML records for each item that Yale has a copy (Yale Library holdings: 'YUS'). Record your query in the etherpad.
 >4. Advacned: Using the results from question 3, add a new column that will contain "TRUE" if Yale has a copy of an item and "FALSE" if Yale doesn't. Copy your expression to etherpad. (hint: try `if()` function)
 >
 >>## Solution
