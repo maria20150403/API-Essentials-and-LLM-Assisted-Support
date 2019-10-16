@@ -1,7 +1,7 @@
 ---
 title: "Creating URL Queries"
-teaching:  15
-exercises: 10
+teaching:  20
+exercises: 20
 questions:
 - "What are URL query strings?"
 - "How can you make API requests?"

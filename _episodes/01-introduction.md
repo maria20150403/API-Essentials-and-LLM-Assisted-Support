@@ -1,6 +1,6 @@
 ---
 title: "Introduction to APIs"
-teaching: 15
+teaching: 25
 exercises: 0
 questions:
 - "What are APIs? What can they do?"

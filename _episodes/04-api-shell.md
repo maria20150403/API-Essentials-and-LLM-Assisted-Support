@@ -1,7 +1,7 @@
 ---
 title: "API Queries in Shell"
-teaching: 10
-exercises: 10
+teaching: 50
+exercises: 20
 questions:
 - "How do I fetch data from API's using the Unix shell?"
 - "How do I process API responses to get plain text, usable by standard Unix shell tools?"
