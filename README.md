@@ -1,8 +1,14 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3493358.svg)](https://doi.org/10.5281/zenodo.3493358)  
+
 # APIs for Libraries
 
 This workshop's instructional materials '[APIs for Libraries](https://joshuadull.github.io/APIs-for-Libraries/)' were authored by [Joshua Dull](https://github.com/joshuadull), [David Cirella](https://github.com/decirella), and [Sawyer Newman](https://github.com/sauuyer). Thanks to Kate Nyhan, *[Yukari Sugiyama](https://github.com/ysugiyama3)* and Kayleigh Bohemier for additional contributions. This workshop is derived from work that is Copyright © [Software Carpentry](http://software-carpentry.org/), but the workshop content (images, episodes, excercises, etc.) were developed solely by the authors listed above. 
 
 Thank you to The Carpentries for providing the lesson template & style, code of conduct, sample data, and setup instructions which are also licensed under [CC-BY 4.0 2018–2019](https://creativecommons.org/licenses/by/4.0/) by [The Carpentries](https://carpentries.org/). 
+
+## Citation
+
+Joshua Dull, Sawyer Newman, & David Cirella. (2019, October). APIs for Libraries (Version v1.0). Zenodo. http://doi.org/10.5281/zenodo.3493358
 
 ## License
 
