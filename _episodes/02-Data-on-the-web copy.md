@@ -12,7 +12,7 @@ keypoints:
 - "What are parameters?"
 - "What are appropriate uses of data retrieved via API?"
 ---
-
+CITE: Joshua Dull, Sawyer Newman, & David Cirella. (2019, October). APIs for Libraries (Version v1.0). Zenodo. http://doi.org/10.5281/zenodo.3493358
 ## Data Formats
 
 - **JSON** – JavaScript Object Notation

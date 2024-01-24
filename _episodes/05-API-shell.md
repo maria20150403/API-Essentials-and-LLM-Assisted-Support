@@ -12,6 +12,7 @@ keypoints:
 - "You can request and process data from APIs using Unix shell tools"
 - "JSON or XML results can be parsed to plain text, to be consumed by standard Unix shell tools"
 ---
+CITE: Joshua Dull, Sawyer Newman, & David Cirella. (2019, October). APIs for Libraries (Version v1.0). Zenodo. http://doi.org/10.5281/zenodo.3493358
 
 ## Fetching data from the web
 
@@ -338,6 +339,3 @@ In the body of the loop, we use our `curl` command to query the Voyager API endp
 `jq '.record[].title'; done `
 
 This portion of the command uses the `jq` tool to select the title for the JSON returned for each item.
-
-
-

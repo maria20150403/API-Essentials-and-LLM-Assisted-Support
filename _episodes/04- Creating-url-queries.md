@@ -15,6 +15,8 @@ keypoints:
 - "URL queries are found all across the web"
 ---
 
+CITE: Joshua Dull, Sawyer Newman, & David Cirella. (2019, October). APIs for Libraries (Version v1.0). Zenodo. http://doi.org/10.5281/zenodo.3493358
+
 ## URL Query Strings
 
 ### YouTube
@@ -59,4 +61,3 @@ keypoints:
 >>3. https://api.weather.gov/alerts?active=1&area=CA or https://api.weather.gov/alerts/active?area=CA or https://api.weather.gov/alerts/active/area/CA
 >{: .solution}
 {: .challenge}
-
