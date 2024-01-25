@@ -5,7 +5,7 @@ exercises: 5
 questions:
 - "What is the difference between authentication and authorization?"
 - "What are API keys?"
-- "How do we obtain an PAI key?"
+- "How do we obtain an API key?"
 objectives:
 - "Understand the purpose of authentication and authorisation."
 - "Understand the different methods of authentication."
