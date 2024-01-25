@@ -1,5 +1,5 @@
 ---
-title: "Authentication & Authorisation"
+title: "API queries in python"
 teaching: 15
 exercises: 5
 questions:
