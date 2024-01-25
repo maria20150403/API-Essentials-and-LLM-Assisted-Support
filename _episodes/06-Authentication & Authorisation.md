@@ -1,106 +1,35 @@
 ---
-title: "Authentication"
+title: "Authentication & Authorisation"
 teaching: 15
 exercises: 5
 questions:
-- "What are protocols and ports?"
-- "What are HTTP and HTTPS?"
-- "What are requests and responses? How can we look at them?"
+- "What is the difference between authentication and authorization?"
+- "What are API keys?"
+- "How do we obtain an PAI key?"
 objectives:
-- "Understand the meaning of the terms protocol and port."
-- "Understand what HTTP and HTTPS are, and how it relates to the Web and other aspects of the modern Internet."
-- "Be able to use `curl` to make requests and view responses."
+- "Understand the purpose of authentication and authorisation."
+- "Understand the different methods of authentication."
+- "Be able to obtain and use an API key to access data."
 keypoints:
-- "A protocol is a standard for communicating data across a network. A port is a number to identify which program should process a network connection."
-- "HTTP is the protocol originally designed for requesting and receiving Web pages, but now also used as the basis for a variety of APIs. HTTPS is the encrypted version of HTTP."
-- "Every page on the world wide web is identified with a URL or Uniform Resource Locator."
-- "A request is how you tell a server what you want to see. A response will either give you what you asked for, or tell you why the server can't do that. Both requests and responses have a header, and optionally a body."
-- "We can make requests and receive responses, as well as see their headers, using `curl`."
+- "Authentication ensures that only authorised entities can access the API."
+- "Authorisation ensures they can only access what they're permitted to."
 ---
 cite:
 - Lesson adapted from *Ed Bennett, Michele Mesiti, Colin Sauzé, "Introduction to the Web and Online APIs"*
 
+## Authentication: "Proving Who You Are"
+Authentication is the process of verifying who a user is. When you log into an email account, you enter your username and password. The email service checks these credentials to ensure it's really you.
 
-Since it was first introduced to the world in 1991, the World Wide Web has gone
-from the toy of computer scientists and particle physicists to a dominant part
-of everyday life for billions of people. At its core, the initial World Wide Web
-concept brought together three key ideas:
+## Authorisation: "Establishing What You Can Do"
+Authorisation is the process of verifying what specific applications, files, and data a user has access to.
+Example: Once you're logged into a website, it may check if you have the right to access its admin panel. Even though you're authenticated, you might not be authorised to see certain parts of the website if you don't have the necessary permissions.
 
-1. The use of HTML (Hypertext Markup Language) documents which could contain
-   hyperlinks to other documents (or different parts of the same document).
-   These could reference documents located on any web server in the world.
-2. That every file on the world wide web would have a unique URL (Uniform
-   Resource Locator).
-3. The Hypertext Transfer Protocol (HTTP) that is used to transfer data from the
-   web server to the requesting client.
+Security is crucial. These concepts ensure that only authorized entities can access the API, and they can only access what they're permitted to.
 
-It has gradually consumed many services that were previously separate online
-services, or not available on the Internet at all.
-
-Since the mid-2000s, the Web has increasingly been used to go beyond
-this traditional model of serving HTML to browsers. The same HTTP protocol which
-once served static HTML pages and images is now used to send dynamic content
-generated on the fly for consumption by other computer programs.
-
-These Application Programming Interfaces (APIs) provide incredible amounts of
-structured data, as well as the ability to control things that may previously
-have required specialist proprietary software or even hardware. In particular,
-the data available via web APIs is particularly useful for data scientists; many
-data are now only made available via these APIs, and even in cases where data
-are made available in other formats, using an API is frequently more convenient.
-
-To make effective use of web APIs, we need to understand a little more about how
-the Web works than a typical Web user might. This lesson will focus on
-_clients_&mdash;computers and software applications that make requests to other
-computers or applications, and receive information in response. Computers and
-applications that respond to such requests are referred to as _servers_.
-
-
-## Protocols and ports
-
-You may (or may not) have wondered how it is that different web browsers,
-written independently by different companies and running on different operating
-systems, are able to talk to the same web servers using the same addresses, and
-get the same web pages back. This is because all web browsers implement the
-_HyperText Transfer Protocol_, or HTTP.
-
-A protocol is nothing more than a system of rules that allow for communication
-between computers (or other devices). Much like a (human) language, it defines
-rules and syntax that when all parties follow, allow information to be
-transmitted from one device to another. Other examples of protocols you may be
-familiar with include the Secure Shell SSH, the File Transfer Protocol FTP, and
-the Simple Mail Transfer Protocol SMTP. Wikipedia has a [long
-list][protocol-list] of protocols that are (or once were) in common usage. HTTPS
-is a protocol closely related to HTTP; it follows many of the same conventions
-as HTTP, particularly in the way client and server code is written, but includes
-additional encryption to ensure that untrusted third parties can't read or
-modify data in transit.
-
-Given the large number of protocols in existence, computers need a way to
-identify which protocol a particular network connection is using, in particular
-on devices that have many different servers running. This is done by another set
-of protocols, which the above protocols build on top of: the Transmission
-Control Protocol (TCP) and the User Datagram Protocol (UDP). The difference
-between these isn't important today; the important fact is that both protocols
-define _port numbers_ (or _ports_) that are used to identify which server should
-handle a particular connection.
-
-A server application must register a particular port to listen for connections
-on, and then all connections with that port number will be directed to that
-application. Ports are numbered 1&ndash;65,535, with ports up to 1,023 being
-"system ports" that on Unix-like systems require root access to listen to. Many
-protocols have standard ports that are used by convention&mdash;for example,
-HTTP uses port 80 by default, and HTTPS port 443. However, there is nothing
-stopping any protocol being used on any port.
-
-You may have noticed that web addresses sometimes include a colon and a number
-after the server name; this indicates to the browser which port to connect on,
-in cases where you don't want to connect to the default port (80 or 443). For
-example, Jupyter notebooks are frequently served at `http://localhost:8888`;
-this indicates that your browser should make an HTTP connection to your own
-local machine, on port 8888. Since only one application can listen to a port at
-a time, sometimes Jupyter finds it can't listen on port 8888, and so will
-reserve port 8889 or 8890 instead.
+## Different methods of Authentication & Authorisation
+Basic Authentication: Username and Password mechanism.
+API Keys: Tokens to identify and validate the user/application.
+OAuth: A standard protocol for token-based authentication and authorization.
 
 ## URLs
 
