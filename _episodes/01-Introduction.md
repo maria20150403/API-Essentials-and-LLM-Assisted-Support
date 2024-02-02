@@ -29,7 +29,9 @@ This is where APIs come into play. APIs are designed to eliminate redundancies a
 
 You might already be familiar with the concept of APIs from using Python. Although library APIs in Python, such as the `math` library, differ from web APIs, the principle remains the same. For instance, instead of writing out the formula to calculate a mean, you can simply use `math.mean()`.
 
-An application programming interface (API) is a way for two or more computer programs or components to communicate with each other.
+>What is an API?
+>An application programming interface (API) is a way for two or more computer programs or components to communicate with each other.
+{: .callout}
 
 >## Let’s create a query 
 > Run this query: https://api.weather.gov/stations?limit=10&state=CT
