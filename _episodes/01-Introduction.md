@@ -1,13 +1,13 @@
 ---
-title: "HTTP"
+title: "Basic concepts"
 teaching: 15
 exercises: 5
 questions:
-- "What are protocols and ports?"
-- "What are HTTP and HTTPS?"
-- "What are requests and responses? How can we look at them?"
+- "What is an API?"
+- "Why do we need APIs?"
+- "What are the main components of an API?"
 objectives:
-- "Understand the meaning of the terms protocol and port."
+- "Understand the need for an API."
 - "Understand what HTTP and HTTPS are, and how it relates to the Web and other aspects of the modern Internet."
 - "Be able to use `curl` to make requests and view responses."
 keypoints:
@@ -20,6 +20,19 @@ keypoints:
 cite:
 - Lesson adapted from *Ed Bennett, Michele Mesiti, Colin Sauzé, "Introduction to the Web and Online APIs"*
 
+
+>## Let’s create a query 
+> Run this query: https://api.weather.gov/stations?limit=10&state=CT
+>1. What do the results show?
+>2. What is the Station Identifier for Tweed-New Haven Airport?
+>3. Write a query that returns all active weather alerts for California. (Hint: use 'area' not 'state')
+>
+>>## Solution
+>>1. Shows 10 currently-active weather stations in Connecticut and includes metadata about each station.
+>>2. KHVN
+>>3. https://api.weather.gov/alerts?active=1&area=CA or https://api.weather.gov/alerts/active?area=CA or https://api.weather.gov/alerts/active/area/CA
+>{: .solution}
+{: .challenge}
 
 Since it was first introduced to the world in 1991, the World Wide Web has gone
 from the toy of computer scientists and particle physicists to a dominant part
