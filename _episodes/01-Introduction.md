@@ -20,6 +20,16 @@ keypoints:
 cite:
 - Lesson adapted from *Ed Bennett, Michele Mesiti, Colin Sauzé, "Introduction to the Web and Online APIs"*
 
+## Why do we need APIs?
+Imagine you regularly work with a large, frequently updated online dataset. Accessing up-to-date information traditionally means downloading the entire dataset each time—a process that's far from efficient, especially when you only need a small segment of the data.
+
+Now, consider the scenario where your work requires only specific data points, such as certain entries or particular geographic locations. The inefficiency multiplies when you're forced to download vast datasets for just a handful of relevant pieces of information.
+
+This is where APIs come into play. APIs are designed to eliminate redundancies and boost efficiency. They allow you to request and receive only the data you need, even if it's just a small portion of a larger dataset. 
+
+You might already be familiar with the concept of APIs from using Python. Although library APIs in Python, such as the `math` library, differ from web APIs, the principle remains the same. For instance, instead of writing out the formula to calculate a mean, you can simply use `math.mean()`.
+
+An application programming interface (API) is a way for two or more computer programs or components to communicate with each other.
 
 >## Let’s create a query 
 > Run this query: https://api.weather.gov/stations?limit=10&state=CT
