@@ -45,7 +45,7 @@ HTTPS is a protocol closely related to HTTP; it follows many of the same convent
 
 >## Requests and responses
 >
->The two main objects in HTTP are the _request_ and the _response_. Each HTTP connection is initiated by sending a request, and is replied >to with a response. Both the request and response have a _header_, that defines metadata about what is requested and what is included in >the response, and both can also have a _body_, containing data.
+>The two main objects in HTTP are the _request_ and the _response_. Each HTTP connection is initiated by sending a request, and is replied to with a response. Both the request and response have a _header_, that defines metadata about what is requested and what is included in the response, and both can also have a _body_, containing data.
 
 ## URLs
 
