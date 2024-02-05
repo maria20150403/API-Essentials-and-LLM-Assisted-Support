@@ -20,7 +20,6 @@ keypoints:
 
 Imagine you regularly work with a large, frequently updated online dataset. How do you access the latest data each time you need it? What if you work with only a small segment of the data?
 
-
 In such a case, accessing up-to-date information wpuld traditionally mean downloading the entire dataset each time—a process that is far from efficient.
 
 Additinally, let's say your task involves mapping longitude and latitude values from the dataset on to a global map, which is a different size each time. Manually scaling these values to accurately place them on a map not only invites redundancy but is also prone to error. Performing these calculations repeatedly for common, globally recognized locations is an unnecessary drain on resources and time.
@@ -30,15 +29,11 @@ This is where APIs come into play. APIs are designed to eliminate such redundanc
 ## What is an API
 An Application Programming Interface (API) defines how different software components should interact, allowing them to communicate and share data and functionalities efficiently.
 
+APIs provide incredible amounts of structured data, as well as the ability to control things that may previously have required specialist proprietary software or even hardware. In particular, the data available via web APIs is particularly useful for data scientists; many data are now only made available via these APIs, and even in cases where data are made available in other formats, using an API is frequently more convenient.
+
 ## How APIs work
 
 ![Illustration of APIs as a Barista](../assets/img/HowAPIWorks.png)
-
-
-## How APIs work
-
-![How APIs work in realtion to a web-server](../assets/img/APIServer.png)
-
 
 ## Python Libraries as APIs
 You might already be familiar with the concept of APIs from using Python. For instance, instead of writing out the formula to calculate a mean, you can simply use math.mean(). This approach saves time and simplifies your code. APIs abstract away complexity, allowing you to focus on higher-level problem-solving.
@@ -46,6 +41,6 @@ You might already be familiar with the concept of APIs from using Python. For in
 ## Web APIs
 Although library APIs in Python, such as the math library, differ from web APIs, the principle remains the same. 
 
- library APIs (such as those in Python's standard library) are collections of pre-written code that you can call within your program to perform specific tasks without needing to implement the functionality from scratch.
+Library APIs (such as those in Python's standard library) are collections of pre-written code that you can call within your program to perform specific tasks without needing to implement the functionality from scratch.
 
- In contrast, Web APIs are interfaces for interacting with web services over the internet.
+In contrast, Web APIs are interfaces for interacting with web services over the internet.
