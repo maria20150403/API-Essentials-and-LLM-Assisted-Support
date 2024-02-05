@@ -32,12 +32,12 @@ An Application Programming Interface (API) defines how different software compon
 
 ## How APIs work
 
-![Illustration of APIs as a Barista](../assets/img/HowAPIWorks.png)
+(../assets/img/HowAPIWorks.png)
 
 
 ## How APIs work
 
-![How APIs work in realtion to a web-server](../assets/img/APIServer.png)
+(../assets/img/APIServer.png)
 
 ## Python Libraries as APIs
 You might already be familiar with the concept of APIs from using Python. For instance, instead of writing out the formula to calculate a mean, you can simply use math.mean(). This approach saves time and simplifies your code. APIs abstract away complexity, allowing you to focus on higher-level problem-solving.
