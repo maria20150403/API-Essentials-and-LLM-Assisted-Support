@@ -18,6 +18,18 @@ keypoints:
 - "We can make requests and receive responses, as well as see their headers, using `curl`."
 ---
 
+Imagine you regularly work with a large, frequently updated online dataset. How do you access the latest data each time you need it? What if you work with only a small segment of the data?
+
+
+In such a case, accessing up-to-date information wpuld traditionally mean downloading the entire dataset each time—a process that is far from efficient.
+
+Additinally, let's say your task involves mapping longitude and latitude values from the dataset on to a global map, which is a different size each time. Manually scaling these values to accurately place them on a map not only invites redundancy but is also prone to error. Performing these calculations repeatedly for common, globally recognized locations is an unnecessary drain on resources and time.
+
+This is where APIs come into play. APIs are designed to eliminate such redundancies and boost efficiency. They allow you to request and receive only the data you need, even if it's just a small portion of a larger dataset. For tasks like mapping, APIs can also facilitate automatic handling of the complex calculations and data rendering, presenting you with ready-to-use results.
+
+## What is an API
+An Application Programming Interface (API) defines how different software components should interact, allowing them to communicate and share data and functionalities efficiently.
+
 ## How APIs work
 
 ![Illustration of APIs as a Barista: https://www.handsonconnect.org/blog/2016/8/17/whatapi-and-whySource:-should-i-care-is-an-9](../assets/img/HowAPIWorks.png)
