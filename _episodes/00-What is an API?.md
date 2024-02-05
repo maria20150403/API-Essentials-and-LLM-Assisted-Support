@@ -32,9 +32,19 @@ An Application Programming Interface (API) defines how different software compon
 
 ## How APIs work
 
-![Illustration of APIs as a Barista: https://www.handsonconnect.org/blog/2016/8/17/whatapi-and-whySource:-should-i-care-is-an-9](../assets/img/HowAPIWorks.png)
+![Illustration of APIs as a Barista](../assets/img/HowAPIWorks.png)
 
 
 ## How APIs work
 
-![How APIs work in realtion to a web-server: http://www.stepin-solutions.com/blog/api-programming-backbone-of-mobile-app-development/](../assets/img/APIServer.png)
+![How APIs work in realtion to a web-server](../assets/img/APIServer.png)
+
+## Python Libraries as APIs
+You might already be familiar with the concept of APIs from using Python. For instance, instead of writing out the formula to calculate a mean, you can simply use math.mean(). This approach saves time and simplifies your code. APIs abstract away complexity, allowing you to focus on higher-level problem-solving.
+
+## Web APIs
+Although library APIs in Python, such as the math library, differ from web APIs, the principle remains the same. 
+
+ library APIs (such as those in Python's standard library) are collections of pre-written code that you can call within your program to perform specific tasks without needing to implement the functionality from scratch.
+
+ In contrast, Web APIs are interfaces for interacting with web services over the internet.
