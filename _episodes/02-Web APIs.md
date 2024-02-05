@@ -3,7 +3,7 @@ title: "Web APIs?"
 teaching: 15
 exercises: 5
 questions:
-- "What is an API?"
+- "What are the core components of a Web API?"
 - "Why do we need APIs?"
 - "How APIs work?"
 objectives:
