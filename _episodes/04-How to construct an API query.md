@@ -1,5 +1,5 @@
 ---
-title: "How to construct an API?"
+title: "How to construct and use an API?"
 teaching: 15
 exercises: 5
 questions:
@@ -7,8 +7,8 @@ questions:
 - "Why do we need APIs?"
 - "How APIs work?"
 objectives:
-- "Understand the need for an API."
-- "Understand the main components of an API."
+- "API documentation"
+- "Contruct API query"
 - "Familiarity using Library APIs."
 keypoints:
 - "An API is a way for two or more computer programs or components to communicate with each other."
