@@ -68,6 +68,13 @@ make to the API.
 
 By combining these components—endpoints, resources, parameters, and headers—you can construct effective API queries to retrive data, submit new information, or perform other operations via the API.
 
+
+### YouTube
+
+ **[https://www.youtube.com/watch?v=s7wmiS2mSXY&t=1m45s](https://www.youtube.com/watch?v=s7wmiS2mSXY&t=1m45s)**
+![youtube URL](../assets/img/youtubeAPI.png)
+
+
 ## NASA API
 For example, NASA offers an API that exposes much of the data that they make
 public. They require an API key to identify you, but don't require any
@@ -81,35 +88,40 @@ try, querying the Astronomy Picture of the Day (APOD). This shows us that NASA
 expects the API key to be encoded as a query parameter.
 
 ~~~
-$ curl -i https://api.nasa.gov/planetary/apod?api_key=ejgThfasPCRf4kTd39ar55Aqhxv8cwKBdVOyZ9Rr
+$ curl -i https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
 ~~~
 {: .language-bash}
 
 ~~~
-HTTP/1.1 200 OK
-Date: Mon, 15 Mar 2021 00:08:34 GMT
-Content-Type: application/json
-Content-Length: 1135
-Connection: keep-alive
-Vary: Accept-Encoding
-X-RateLimit-Limit: 2000
-X-RateLimit-Remaining: 1998
-Access-Control-Allow-Origin: *
-Age: 0
-Via: http/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
-X-Cache: MISS
-Strict-Transport-Security: max-age=31536000; preload
+HTTP/2 200 
+date: Thu, 08 Feb 2024 02:39:35 GMT
+content-type: application/json
+content-length: 1265
+vary: Accept-Encoding
+access-control-allow-origin: *
+access-control-expose-headers: X-RateLimit-Limit, X-RateLimit-Remaining
+age: 1
+strict-transport-security: max-age=31536000; includeSubDomains; preload
+vary: Accept-Encoding
+via: https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+x-api-umbrella-request-id: cdgqarbvpj8g36vie310
+x-cache: MISS
+x-ratelimit-limit: 40
+x-ratelimit-remaining: 39
+x-vcap-request-id: 029df11c-5e1d-4b6b-6389-b62bf72c9566
+x-frame-options: DENY
+x-content-type-options: nosniff
+x-xss-protection: 1; mode=block
 
-{"copyright":"Mia St\u00e5lnacke","date":"2021-03-14","explanation":"It appeared, momentarily, like a 50-km tall banded flag.  In mid-March of 2015, an energetic Coronal Mass Ejection directed toward a clear magnetic channel to Earth led to one of the more intense geomagnetic storms of recent years. A visual result was wide spread auroras being seen over many countries near Earth's magnetic poles.  Captured over Kiruna, Sweden, the image features an unusually straight auroral curtain with the green color emitted low in the Earth's atmosphere, and red many kilometers higher up. It is unclear where the rare purple aurora originates, but it might involve an unusual blue aurora at an even lower altitude than the green, seen superposed with a much higher red.  Now past Solar Minimum, colorful nights of auroras over Earth are likely to increase.   Follow APOD: Through the Free NASA App","hdurl":"https://apod.nasa.gov/apod/image/2103/AuroraFlag_Stalnacke_6677.jpg","media_type":"image","service_version":"v1","title":"A Flag Shaped Aurora over Sweden","url":"https://apod.nasa.gov/apod/image/2103/AuroraFlag_Stalnacke_960.jpg"}
+{"copyright":"\nKent E. Biggs\n","date":"2024-02-07","explanation":"Are these two galaxies really attracted to each other? Yes, gravitationally, and the result appears as an enormous iconic heart -- at least for now. Pictured is the pair of galaxies cataloged as NGC 4038 and NGC 4039,known as the Antennae Galaxies.  Because they are only 60 million light years away, close by intergalactic standards, the pair is one of the best studied interacting galaxies on the night sky. Their strong attraction began about a billion years ago when they passed unusually close to each other.  As the two galaxies interact, their stars rarely collide, but new stars are formed when their interstellar gases crash together.  Some new stars have already formed, for example, in the long antennae seen extending out from the sides of the dancing duo. By the time the galaxy merger is complete, likely over a billion years from now, billions of new stars may have formed.   Open Science: Browse 3,300+ codes in the Astrophysics Source Code Library","hdurl":"https://apod.nasa.gov/apod/image/2402/Antennae_Biggs_3840.jpg","media_type":"image","service_version":"v1","title":"The Heart Shaped Antennae Galaxies","url":"https://apod.nasa.gov/apod/image/2402/Antennae_Biggs_960.jpg"}
 ~~~
 {: .output}
 
 We can see that this API gives us JSON output including a links to two versions
 of the picture of the day, and then metadata about the picture including its
 title, description, and copyright. The headers also give us some information
-about our API usage&mdash;our rate limit is 2000 requests per day, and we have
-1998 of these remaining (probably because the malware scanner on my email server
-tested the link first to make sure it wasn't malicious).
+about our API usage&mdash;our rate limit is 40 requests per day, and we have
+39 of these remaining.
 
 With all of these ways to provide identification and authentication information,
 we don't have time to cover each possibility exhaustively. For the vast majority
@@ -127,7 +139,7 @@ Let's break down the given URL Certainly! Let's dissect the given URL `https://e
 ### Base URL
 
 - **Base URL**: `https://eutils.ncbi.nlm.nih.gov`
-  - This part of the URL specifies the protocol (`https`) and the domain (`eutils.ncbi.nlm.nih.gov`), directing the request to the NCBI's E-utilities server.
+  - This part of the URL specifies the protocol (`https`) and the domain (`eutils.ncbi.nlm.nih.gov`), directing the request to the NCBI's (National Center for Biotechnology Information) E-utilities server, which hosts various services and databases.
 
 ### Endpoint
 
@@ -155,33 +167,6 @@ Combining these components, the full URL `https://eutils.ncbi.nlm.nih.gov/entrez
 By sending a request to this URL, you're asking the NCBI E-utilities service to fetch the data for a nucleotide sequence identified by `id=5` from the `nucleotide` database and return it in FASTA format. This is a common task in bioinformatics, where accessing specific genetic sequences efficiently is crucial for research and analysis.
 
 By breaking down this URL, you can see how the different components of an API query—endpoint, resources, and parameters—work together to specify and retrieve data from a web-based API.
-
-
-### YouTube
-
- **[https://www.youtube.com/watch?v=s7wmiS2mSXY&t=1m45s](https://www.youtube.com/watch?v=s7wmiS2mSXY&t=1m45s)**
-![youtube URL](../assets/img/youtubeAPI.png)
-
-## Reading Documentation
-
-- Look through the params
-    - What types of search parameters are available?
-    - Do they match what you need?
-    - What is the Endpoint (Base URL)?
-- Look for sample requests & responses
-    - What kind of data does it return?
-    - Is it what you’re looking for?
-- Look for restrictions
-    - Is it free?
-    - Does it require a key or permissions?
-    - Do they impose a limit?
-
-
-## Creating a Query
-- National Weather Service API
-    - Documentation: [https://www.ncbi.nlm.nih.gov/books/NBK25499/](https://www.ncbi.nlm.nih.gov/books/NBK25499/)
-   
-    
 
 >## Let’s create a query 
 > Run this query: https://api.weather.gov/stations?limit=10&state=CT

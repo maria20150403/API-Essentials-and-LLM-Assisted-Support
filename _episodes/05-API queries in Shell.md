@@ -12,7 +12,22 @@ keypoints:
 - "You can request and process data from APIs using Unix shell tools"
 - "JSON or XML results can be parsed to plain text, to be consumed by standard Unix shell tools"
 ---
-CITE: Joshua Dull, Sawyer Newman, & David Cirella. (2019, October). APIs for Libraries (Version v1.0). Zenodo. http://doi.org/10.5281/zenodo.3493358
+
+## Reading Documentation
+
+- Look through the params
+    - What types of search parameters are available?
+    - Do they match what you need?
+    - What is the Endpoint (Base URL)?
+- Look for sample requests & responses
+    - What kind of data does it return?
+    - Is it what you’re looking for?
+- Look for restrictions
+    - Is it free?
+    - Does it require a key or permissions?
+    - Do they impose a limit?
+
+
 
 ## Fetching data from the web
 
@@ -339,3 +354,12 @@ In the body of the loop, we use our `curl` command to query the Voyager API endp
 `jq '.record[].title'; done `
 
 This portion of the command uses the `jq` tool to select the title for the JSON returned for each item.
+## Creating a Query
+- National Center for Biotechnology Information (NCBI) E-utilities documentation:
+    - Documentation: [https://www.ncbi.nlm.nih.gov/books/NBK25499/](https://www.ncbi.nlm.nih.gov/books/NBK25499/)
+
+
+
+   
+    
+
