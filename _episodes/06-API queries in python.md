@@ -131,7 +131,7 @@ print(response.json())
 import requests
 import json
 
-base_url = "https://api.nasa.gov"#/planetary/apod?api_key=DEMO_KEY&count=1"
+base_url = "https://api.nasa.gov"
 endpoint = f"{base_url}/planetary/apod/"
 headers = {"accept": "application/json"}
 params = {"api_key": "DEMO_KEY", "count": 1}
