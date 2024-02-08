@@ -12,8 +12,6 @@ keypoints:
 - "What are parameters?"
 - "What are appropriate uses of data retrieved via API?"
 ---
-CITE: Joshua Dull, Sawyer Newman, & David Cirella. (2019, October). APIs for Libraries (Version v1.0). Zenodo. http://doi.org/10.5281/zenodo.3493358
-
 ## Response Body
 
 The response body in an HTTP transaction carries the payload, which could be the requested HTML page, a JSON or XML file containing data from an API, an image, a video stream, or any other type of content that a client requests.
