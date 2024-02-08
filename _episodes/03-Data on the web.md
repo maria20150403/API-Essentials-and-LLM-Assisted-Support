@@ -22,7 +22,7 @@ The format and structure of the response body depend on the type of resource req
 ## Data Formats
 
 - **JSON** – JavaScript Object Notation
-  - Plain text, can open n any text editor or web browser
+  - Plain text, can open on any text editor or web browser
 - **XML** – eXtensible Markup Language
 
 
