@@ -50,7 +50,7 @@ A tool for transferring data via URL, the `curl  ` command allows use to interac
 Using the Voyager API we enter the command `curl` followed the URL for the Bibliographic item with the ISBN 9780415704953 
 
 ~~~
-$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953
+$ curl -i "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=5&rettype=fasta"
 ~~~
 {: .bash}
 ~~~
@@ -322,38 +322,6 @@ Life.
 ~~~
 {: .output}
 
-## Automating with Loops
-
-Loops are a powerful method for working with APIs using the shell tools.  Building on the [Automating the tedious with loops ](https://librarycarpentry.org/lc-shell/04-loops/index.html)Lesson from yesterday, we can extract specified by making multiple API calls.  
-
-In the example below, we pipe `|` together several shell commands and introduce the `while` loop to call the Voyager API and return the title for a list of items.  
-
-~~~
-$ cat ISBN.txt | while read line; 
-    do curl -s https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=$line  | jq '.record[].title'; 
-    done
-~~~
-{: .bash}
-
-Let's breakdown this command and examine what function each piece is performing.  
-
-First we will need a file containing a list of ISBN numbers which we will pass to the Voyager API to identify which items we would like bibliographic information about.  
-
-`$ cat isbn.txt |`
-
-We use the `cat` command to read the contents of the file, followed by the pipe symbol to send to the next part of our command:
-
-`while read line;`
-
-The `while` keyword initiates a loop to that uses the `read` command to assign the content of each line in the text file to the variable `line`, one line at a time.  Similar to a `for` loop, the while loop repeats this action, in this case, until all lines in the file have been read.  
-
-`do curl -s https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=$line | `
-
-In the body of the loop, we use our `curl` command to query the Voyager API endpoint.  We call this command using the `$line` variable in place of the ISBN number in the URL, this allows for the value read from the text file be substituted in each iteration of the loop.  We then pipe the API response to the final part of our command:
-
-`jq '.record[].title'; done `
-
-This portion of the command uses the `jq` tool to select the title for the JSON returned for each item.
 ## Creating a Query
 - National Center for Biotechnology Information (NCBI) E-utilities documentation:
     - Documentation: [https://www.ncbi.nlm.nih.gov/books/NBK25499/](https://www.ncbi.nlm.nih.gov/books/NBK25499/)
