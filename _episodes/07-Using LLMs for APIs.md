@@ -45,13 +45,14 @@ As a strategy, ask the LLM to construct a simple API query and check against the
 ## Help Understanding API Documentation
 Some API documentations lack clarity on the types and ranges of valid inputs expected for parameters. Often, query parameters are not intuitive and the documentation may not include example queries, making it challenging to construct complex queries due to ambiguities. However, Large Language Models (LLMs) like ChatGPT, trained on extensive web data, can accurately interpret specific query parameters and offer insights into valid input values and their ranges.
 
+
 Let's have a look at the FBI Crime Data API documentation: https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/docApi
 
 
 ## Understanding API Responses
 You can also paste in a block of JSON response from an API request to ChatGPT and ask it to describe it for you.
 
-## Error Handling
+## Resolving Errors
 Sometimes you can receive error codes from an API request. LLMs like ChatGPT can help you understand and resolve these errors.
 
 ## Modifying provided example code 
