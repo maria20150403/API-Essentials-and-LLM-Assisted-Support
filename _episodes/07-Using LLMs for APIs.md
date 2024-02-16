@@ -103,7 +103,37 @@ for ($retstart = 0; $retstart < $count; $retstart += $retmax) {
 }
 close OUT;
 ```
+Let's say you are comfortable with Python. If you input this into ChatGPT, it produces a valid working python equivalent:
 
+```python
+import requests
 
+def fetch_chimpanzee_mrna_sequences():
+    # Define the query and the base URL
+    query = 'chimpanzee[orgn]+AND+biomol+mrna[prop]'
+    base_url = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/'
+
+    # ESearch: Retrieve the GI numbers and post them on the History server
+    esearch_url = f"{base_url}esearch.fcgi?db=nucleotide&term={query}&usehistory=y"
+    response = requests.get(esearch_url)
+    web_env = response.text.split('<WebEnv>')[1].split('</WebEnv>')[0]
+    query_key = response.text.split('<QueryKey>')[1].split('</QueryKey>')[0]
+    count = int(response.text.split('<Count>')[1].split('</Count>')[0])
+
+    # Prepare to retrieve data in batches
+    retmax = 500
+    with open("chimp.fna", "w") as outfile:
+        for retstart in range(0, count, retmax):
+            efetch_url = f"{base_url}efetch.fcgi?db=nucleotide&WebEnv={web_env}"
+            efetch_url += f"&query_key={query_key}&retstart={retstart}"
+            efetch_url += f"&retmax={retmax}&rettype=fasta&retmode=text"
+            efetch_response = requests.get(efetch_url)
+            outfile.write(efetch_response.text)
+
+# Run the function
+fetch_chimpanzee_mrna_sequences()
+```
+
+- Output validation: Don't forget to compare the output of the python script against that of the perl script
 ## General Queries Regarding Best Practices
 As a very simple yet helpful use-case of LLMs is to enquire about best practices when using API keys aor APIs in general.
