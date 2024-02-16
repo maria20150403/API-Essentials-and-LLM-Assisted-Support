@@ -13,21 +13,6 @@ keypoints:
 - "JSON or XML results can be parsed to plain text, to be consumed by standard Unix shell tools"
 ---
 
-## Reading Documentation
-
-- Look through the params
-    - What types of search parameters are available?
-    - Do they match what you need?
-    - What is the Endpoint (Base URL)?
-- Look for sample requests & responses
-    - What kind of data does it return?
-    - Is it what you’re looking for?
-- Look for restrictions
-    - Is it free?
-    - Does it require a key or permissions?
-    - Do they impose a limit?
-
-
 
 ## Fetching data from the web
 
@@ -79,7 +64,7 @@ $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 >
 ~~~
 {: .bash}
 
-Alternatively, the output can be piped to another command for futher action:
+Alternatively, the output can be piped to another command for further action:
 
 ~~~
 $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 | wc -l
@@ -321,10 +306,6 @@ Anthropology of religion.
 Life.
 ~~~
 {: .output}
-
-## Creating a Query
-- National Center for Biotechnology Information (NCBI) E-utilities documentation:
-    - Documentation: [https://www.ncbi.nlm.nih.gov/books/NBK25499/](https://www.ncbi.nlm.nih.gov/books/NBK25499/)
 
 
 

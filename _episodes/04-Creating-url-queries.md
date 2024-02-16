@@ -5,11 +5,11 @@ exercises: 20
 questions:
 - "What are URL query strings?"
 - "How can you make API requests?"
-- "How do you interperet API documentation?"
+- "How do you interpret API documentation?"
 objectives:
 - "Explain URL query strings"
 - "Explain how to create API queries"
-- "Explain how to read and interperet API documentation"
+- "Explain how to read and interpret API documentation"
 keypoints:
 - "REST APIs use query stings to make requests"
 - "URL queries are found all across the web"
@@ -54,9 +54,9 @@ entirely separately, with no memory from one request to the next. This means
 that you must present your authentication credentials with every request you
 make to the API.
 
-### Constructing API Queries
+## Constructing API Queries
 
-## Reading Documentation
+### Reading Documentation
 
 - Look through the params
     - What types of search parameters are available?

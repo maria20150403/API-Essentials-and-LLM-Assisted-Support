@@ -5,8 +5,8 @@ exercises: 0
 questions:
 - "How do I read data types like JSON & XML?"
 objectives:
-- "Understand commmon types of structured data"
-- "Understand concepts realted to APIs"
+- "Understand common types of structured data"
+- "Understand concepts related to APIs"
 keypoints:
 - "How to read structured data types: JSON & XML"
 - "What are parameters?"
@@ -78,7 +78,7 @@ The format and structure of the response body depend on the type of resource req
 }
 ```
 
-Here's the same data with the Key/Value pairs labled:
+Here's the same data with the Key/Value pairs labeled:
 
 ![Sample JSON data](../assets/img/Slide06.png)
 

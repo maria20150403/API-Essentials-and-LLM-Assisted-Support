@@ -114,4 +114,3 @@ params = {"api_key": api_key, "count": 2}
 response = requests.get(endpoint, params=params, headers=headers)
 print(response.json())
 ```
-

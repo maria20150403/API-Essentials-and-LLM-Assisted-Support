@@ -21,7 +21,7 @@ As described previously, Web APIs enable communication between different softwar
 
 ## How APIs work
 
-![How APIs work in realtion to a web-server](../assets/img/APIServer.png)
+![How APIs work in relation to a web-server](../assets/img/APIServer.png)
 
 This process is governed by a set of predefined rules and protocols that ensure seamless communication, regardless of the diversity in programming languages and hardware platforms involved. The cornerstone protocol in Web API interactions is HTTP (Hypertext Transfer Protocol), which outlines how messages are formatted and transmitted over the web, and how web servers and browsers should respond to various commands.
 
