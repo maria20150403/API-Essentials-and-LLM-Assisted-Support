@@ -39,8 +39,8 @@ As a strategy, ask the LLM to construct a simple API query and check against the
 >>import requests
 >>import json
 >>```
->>{ .solution}
->{: .challenge}
+>{ .solution}
+{: .challenge}
 
 ## Help Understanding API Documentation
 Some API documentations lack clarity on the types and ranges of valid inputs expected for parameters. Often, query parameters are not intuitive and the documentation may not include example queries, making it challenging to construct complex queries due to ambiguities. However, Large Language Models (LLMs) like ChatGPT, trained on extensive web data, can accurately interpret specific query parameters and offer insights into valid input values and their ranges.
