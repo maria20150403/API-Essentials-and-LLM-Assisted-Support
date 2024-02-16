@@ -73,7 +73,7 @@ LLMs like ChatGPT are very accurate in translating such small snippets of code f
 
 Let's take the example Perl script provided for this goal:
 
-~~
+```perl
 use LWP::Simple;
 $query = 'chimpanzee[orgn]+AND+biomol+mrna[prop]';
 
@@ -102,8 +102,7 @@ for ($retstart = 0; $retstart < $count; $retstart += $retmax) {
         print OUT "$efetch_out";
 }
 close OUT;
-~~
-{: .perl}
+```
 
 
 ## General Queries Regarding Best Practices
