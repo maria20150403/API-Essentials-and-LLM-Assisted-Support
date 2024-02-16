@@ -29,13 +29,13 @@ Building on the skill from [Unix shell](https://librarycarpentry.org/lc-shell/) 
 In this lesson we will use `curl` command for interacting with our API endpoints and either `jq` or `xmlstarlet` to process the return based on the type response that is given by the endpoint.  In both cases we use the Unix shell pipe `|` to redirect the output of the `curl` command into the next for processing.
 
 ## API `Get` Requests  
-A tool for transferring data via URL, the `curl  ` command allows use to interact with API endpoints from the command line.  A full-featured tool, the `curl` command  has built-in functionality to work with *most* types of API endpoint and authentication schemes.  While our examples using the Yale University Library Voyager API is does not require authentication, the full manual of usage options are available on the command line by entering `man curl`
+A tool for transferring data via URL, the `curl  ` command allows use to interact with API endpoints from the command line.  A full-featured tool, the `curl` command  has built-in functionality to work with *most* types of API endpoint and authentication schemes. The full manual of usage options are available on the command line by entering `man curl`
  
 
-Using the Voyager API we enter the command `curl` followed the URL for the Bibliographic item with the ISBN 9780415704953 
+Using the NCBI E-Utilities API, we enter the command `curl` followed by the URL for the Bibliographic item with the ISBN 9780415704953 
 
 ~~~
-$ curl -i "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=5&rettype=fasta"
+$ curl "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=5&rettype=fasta"
 ~~~
 {: .bash}
 ~~~

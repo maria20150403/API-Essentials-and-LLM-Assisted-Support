@@ -48,12 +48,62 @@ Some API documentations lack clarity on the types and ranges of valid inputs exp
 Let's have a look at the FBI Crime Data API documentation: https://cde.ucr.cjis.gov/LATEST/webapp/#/pages/docApi
 
 
-
 ## Understanding API Responses
 You can also paste in a block of JSON response from an API request to ChatGPT and ask it to describe it for you.
 
 ## Error Handling
 Sometimes you can receive error codes from an API request. LLMs like ChatGPT can help you understand and resolve these errors.
+
+## Modifying provided example code 
+Let's try to attempt this task:
+### Application: Retrieving large datasets
+#### Goal: 
+Download all chimpanzee mRNA sequences in FASTA format (>50,000 sequences).
+
+#### Solution: 
+First use ESearch to retrieve the GI numbers for these sequences and post them on the History server, then use multiple EFetch calls to retrieve the data in batches of 500.
+
+- Input: $query – chimpanzee[orgn]+AND+biomol+mrna[prop]
+
+- Output: A file named "chimp.fna" containing FASTA data.
+
+Lucky for us, the API documentation contains examples applications, and this is one of them : https://www.ncbi.nlm.nih.gov/books/NBK25498/
+However, Some of the scripts are in Perl, which you may not be familiar with.
+LLMs like ChatGPT are very accurate in translating such small snippets of code from one language to another. Again, you need to remember that it depends on whether or not the LLM has been significantly exposed to a particular programming language in its training data.
+
+Let's take the example Perl script provided for this goal:
+
+~~
+use LWP::Simple;
+$query = 'chimpanzee[orgn]+AND+biomol+mrna[prop]';
+
+#assemble the esearch URL
+$base = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/';
+$url = $base . "esearch.fcgi?db=nucleotide&term=$query&usehistory=y";
+
+#post the esearch URL
+$output = get($url);
+
+#parse WebEnv, QueryKey and Count (# records retrieved)
+$web = $1 if ($output =~ /<WebEnv>(\S+)<\/WebEnv>/);
+$key = $1 if ($output =~ /<QueryKey>(\d+)<\/QueryKey>/);
+$count = $1 if ($output =~ /<Count>(\d+)<\/Count>/);
+
+#open output file for writing
+open(OUT, ">chimp.fna") || die "Can't open file!\n";
+
+#retrieve data in batches of 500
+$retmax = 500;
+for ($retstart = 0; $retstart < $count; $retstart += $retmax) {
+        $efetch_url = $base ."efetch.fcgi?db=nucleotide&WebEnv=$web";
+        $efetch_url .= "&query_key=$key&retstart=$retstart";
+        $efetch_url .= "&retmax=$retmax&rettype=fasta&retmode=text";
+        $efetch_out = get($efetch_url);
+        print OUT "$efetch_out";
+}
+close OUT;
+~~
+{. perl}
 
 
 ## General Queries Regarding Best Practices
