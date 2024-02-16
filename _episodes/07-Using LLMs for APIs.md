@@ -103,7 +103,7 @@ for ($retstart = 0; $retstart < $count; $retstart += $retmax) {
 }
 close OUT;
 ~~
-{. perl}
+{: .perl}
 
 
 ## General Queries Regarding Best Practices
