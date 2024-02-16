@@ -188,15 +188,16 @@ By sending a request to this URL, you're asking the NCBI E-utilities service to 
 By breaking down this URL, you can see how the different components of an API query—endpoint, resources, and parameters—work together to specify and retrieve data from a web-based API.
 
 >## Let’s create a query 
-> Run this query: https://api.weather.gov/stations?limit=10&state=CT
+> Run this query: https://api.weather.gov/stations?limit=3
 >1. What do the results show?
->2. What is the Station Identifier for Tweed-New Haven Airport?
->3. Write a query that returns all active weather alerts for California. (Hint: use 'area' not 'state')
+>2. What is the Station Identifier for Hawks Rise Elementary?
+>3. Write a query that returns all active weather alerts for California. (Hint: Check API doc https://www.weather.gov/documentation/services-web-api)
 >
 >>## Solution
->>1. Shows 10 currently-active weather stations in Connecticut and includes metadata about each station.
->>2. KHVN
->>3. https://api.weather.gov/alerts?active=1&area=CA or https://api.weather.gov/alerts/active?area=CA or https://api.weather.gov/alerts/active/area/CA
+>>1. Shows 3 currently-active weather stations in New York and includes metadata about each station.
+>>2. 0005W
+>>3. https://api.weather.gov/alerts/active/area/CA
+
 >{: .solution}
 {: .challenge}
 

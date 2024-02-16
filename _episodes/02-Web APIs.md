@@ -74,26 +74,39 @@ In a GET request for a webpage, the body would contain the HTML of the page.
 In a POST request that submits data (like a form submission), the response body might contain a confirmation message or the details of the created resource.
 
 ## Example HTTP request and response in bash
-To look at these in more detail, we can use the `curl` command. Specifically, to see the request headers, we can use `curl` followed by the URL we wish to request.
+To look at these in more detail, we can use the `curl` command. Specifically, to see the request headers, we can use `curl -i` followed by the URL we wish to request.
 
 ~~~
-$ curl https://carpentries.org
+$ curl -i http://carpentries.org
 ~~~
 {: .language-bash}
 
 ~~~
-HTTP/2 200
+HTTP/1.1 301 Moved Permanently
+server: envoy
+date: Fri, 16 Feb 2024 02:58:34 GMT
 content-type: text/html
-content-length: 55036
-date: Sat, 13 Mar 2021 01:32:50 GMT
-last-modified: Sat, 13 Mar 2021 01:26:59 GMT
-etag: "f16c8eaddc88e035134aa23e0f8a94ba"
-server: AmazonS3
-x-cache: Hit from cloudfront
-via: 1.1 a25f829e86f504a329e71fa3f4d21485.cloudfront.net (CloudFront)
-x-amz-cf-pop: LHR62-C5
-x-amz-cf-id: WGyZEdVLxTFbdQ3eKX2rdnPWO0214DDcQi8TA5UpObYt2CgHjCUz7g==
-age: 87
+content-length: 167
+location: https://carpentries.org/
+x-cache: Redirect from cloudfront
+via: 1.1 50b82c7b764423c87ef333da04c77668.cloudfront.net (CloudFront)
+x-amz-cf-pop: MEL52-P2
+x-amz-cf-id: wD4E6tTNSW3i-Y9OBxEQPvhXRONa0IXspKqOHxzJM_FxUpiCttBRTA==
+x-xss-protection: 1; mode=block
+x-frame-options: SAMEORIGIN
+referrer-policy: strict-origin-when-cross-origin
+content-security-policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
+x-content-type-options: nosniff
+vary: Origin
+x-envoy-upstream-service-time: 19
+
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>CloudFront</center>
+</body>
+</html>
 ~~~
 {: .output}
 
