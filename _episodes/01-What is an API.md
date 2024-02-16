@@ -20,9 +20,9 @@ keypoints:
 
 Imagine you regularly work with a large, frequently updated online dataset. How do you access the latest data each time you need it? What if you work with only a small segment of the data?
 
-In such a case, accessing up-to-date information wpuld traditionally mean downloading the entire dataset each time—a process that is far from efficient.
+In such a case, accessing up-to-date information would traditionally mean downloading the entire dataset each time—a process that is far from efficient.
 
-Additinally, let's say your task involves mapping longitude and latitude values from the dataset on to a global map, which is a different size each time. Manually scaling these values to accurately place them on a map not only invites redundancy but is also prone to error. Performing these calculations repeatedly for common, globally recognized locations is an unnecessary drain on resources and time.
+Additionally, let's say your task involves mapping longitude and latitude values from the dataset on to a global map, which is a different size each time. Manually scaling these values to accurately place them on a map not only invites redundancy but is also prone to error. Performing these calculations repeatedly for common, globally recognized locations is an unnecessary drain on resources and time.
 
 This is where APIs come into play. APIs are designed to eliminate such redundancies and boost efficiency. They allow you to request and receive only the data you need, even if it's just a small portion of a larger dataset. For tasks like mapping, APIs can also facilitate automatic handling of the complex calculations and data rendering, presenting you with ready-to-use results.
 

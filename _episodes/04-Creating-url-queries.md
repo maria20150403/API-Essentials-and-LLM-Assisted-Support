@@ -54,8 +54,24 @@ entirely separately, with no memory from one request to the next. This means
 that you must present your authentication credentials with every request you
 make to the API.
 
-### Constructing an API Query: Example
+### Constructing API Queries
 
+## Reading Documentation
+
+- Look through the params
+    - What types of search parameters are available?
+    - Do they match what you need?
+    - What is the Endpoint (Base URL)?
+- Look for sample requests & responses
+    - What kind of data does it return?
+    - Is it what you’re looking for?
+- Look for restrictions
+    - Is it free?
+    - Does it require a key or permissions?
+    - Do they impose a limit?
+
+
+### Constructing an API Query: An Example
 1. **Choose the Endpoint**: Based on what you want to achieve, select the appropriate endpoint. For instance, to retrieve user details, you might have an endpoint like `https://api.example.com/users`.
 
 2. **Identify Required Resources**: Determine what resources you need. Using the `/users` endpoint as an example, the resource is `users`.
@@ -83,8 +99,11 @@ authentication beyond this.
 Let's try working with the NASA API now. To do this, first we need to generate
 our API key by providing our details at [the API home page][nasa-api]. Once that
 is done, NASA provide the API key instantly, and send a copy to the email
-address you provide. They helpfully also provide an example of an API query to
-try, querying the Astronomy Picture of the Day (APOD). This shows us that NASA
+address you provide. 
+
+
+Let's construct an API query to try, querying the Astronomy Picture of the Day (APOD).
+The first step is to read and understand the API documentation. They also provide example queries in which you can see that NASA
 expects the API key to be encoded as a query parameter.
 
 ~~~

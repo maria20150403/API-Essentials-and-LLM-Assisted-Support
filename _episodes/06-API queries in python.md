@@ -20,15 +20,12 @@ keypoints:
 
 - **`requests`**:
 The requests library in Python is a popular and user-friendly HTTP library that simplifies the process of making HTTP requests. It abstracts away much of the complexity involved in sending HTTP requests and handling responses.
-
-The requests.get function is used to send a GET request to a specified URL. A GET request is one of the most common HTTP methods, used primarily to retrieve data from a specified resource.
+The requests.get function is used to send a GET request to a specified URL.
 
 - **`json`**:
-The `json` module in Python is a standard library component that provides a straightforward way to encode and decode JSON data. JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate.
+One of the primary uses of the `json` module is to parse JSON data received from an API into Python dictionaries, allowing for easy access and manipulation of the data within a Python program. JSON is easy for humans to read and write and easy for machines to parse and generate.
 
-### Parsing JSON into Python Dictionaries
-
-One of the primary uses of the `json` module is to parse JSON data received from an API into Python dictionaries, allowing for easy access and manipulation of the data within a Python program.
+- `json.loads()`: This function is used to parse a JSON string, converting it into a Python dictionary. `loads` stands for "load string."
 
 #### Example of Parsing JSON:
 
@@ -44,14 +41,10 @@ data_dict = json.loads(json_data)
 print(data_dict)  # Output: {'name': 'John', 'age': 30, 'city': 'New York'}
 ```
 
-- `json.loads()`: This function is used to parse a JSON string, converting it into a Python dictionary. `loads` stands for "load string."
+### Formatting the Output
 
-### Converting Python Dictionaries to JSON
-
-Conversely, the `json` module can also convert Python dictionaries into JSON strings. This is particularly useful when you need to send data to a web API in JSON format.
-
-- **Pretty Printing**: 
-The `json.dumps()` function provides parameters like `indent` and `sort_keys` to format the JSON output, making it more readable. This function takes a Python object (like a dictionary) and returns a JSON string. `dumps` stands for "dump to string."
+- **`json.dumps`**:
+The `json.dumps()` function provides parameters like `indent` and `sort_keys` to format the JSON output, making it more readable. This function takes a Python object (like a dictionary) and returns a JSON string.
 
 
 #### Example of Converting to JSON:
@@ -67,20 +60,16 @@ data_dict = {
 }
 
 # Convert the Python dictionary to a JSON string
-json_data = json.dumps(data_dict)
+
+json_data = json.dumps(data_dict,indent=4, sort_keys=True)
 
 print(json_data)  # Output: '{"name": "Jane", "age": 25, "city": "Los Angeles"}'
 ```
-
-### Formatting the Output
-
-- **`json.dumps`**:
-  - Discuss the `json.dumps` function for converting a Python dictionary to a JSON-formatted string, useful for pretty-printing the response. The `indent=4` parameter enhances readability, and `sort_keys=True` sorts the dictionary keys alphabetically in the output.
-
+## API keys
 
 Using environment variables to store API keys is a safer alternative that keeps sensitive information like API keys out of your source code, making your application more secure. 
 
-### Step 1: Setting the Environment Variable
+### Setting the Environment Variable
 
 First, you'll need to set the environment variable in your operating system.
 
@@ -126,19 +115,3 @@ response = requests.get(endpoint, params=params, headers=headers)
 print(response.json())
 ```
 
-
-~~~
-import requests
-import json
-
-base_url = "https://api.nasa.gov"
-endpoint = f"{base_url}/planetary/apod/"
-headers = {"accept": "application/json"}
-params = {"api_key": "DEMO_KEY", "count": 1}
-
-#response = requests.get("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")#,headers=headers)
-response = requests.get(endpoint,params=params, headers=headers)
-#print(response.json())
-print(json.dumps(response.json(),indent=4, sort_keys=True))
-~~~
-{: .language-python}
