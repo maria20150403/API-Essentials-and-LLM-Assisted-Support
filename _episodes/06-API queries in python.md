@@ -176,6 +176,8 @@ print(json_data)
 
 Using environment variables to store API keys is a safer alternative that keeps sensitive information like API keys out of your source code, making your application more secure. 
 
+Let's see how to do this by querying the Astronomy Picture of the Day (APOD) endpoint of th NASA API: https://api.nasa.gov
+
 ### Setting the Environment Variable
 
 First, you'll need to set the environment variable in your operating system.
