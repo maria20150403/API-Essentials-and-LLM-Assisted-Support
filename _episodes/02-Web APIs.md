@@ -3,18 +3,21 @@ title: "Web APIs?"
 teaching: 15
 exercises: 5
 questions:
-- "What are the core components of a Web API?"
-- "Why does security become necessary for Web APIS?"
+- "How do Web APIs facilitate communication between software systems over the internet?"
+- "What role does HTTP play in Web API interactions?"
+- "How are requests and responses structured to exchange data effectively?"
 objectives:
-- "Understand the need for an API."
-- "Understand the main components of an API."
-- "Familiarity using Library APIs."
+- "Understand Web API communication via client-server requests and responses."
+- "Explore HTTP's role in standardizing Web API interactions and security with HTTPS."
+- "Learn the structure of HTTP requests and responses for effective data exchange."
 keypoints:
-- "An API is a way for two or more computer programs or components to communicate with each other."
-- "HTTP is the protocol originally designed for requesting and receiving Web pages, but now also used as the basis for a variety of APIs. HTTPS is the encrypted version of HTTP."
-- "Every page on the world wide web is identified with a URL or Uniform Resource Locator."
-- "A request is how you tell a server what you want to see. A response will either give you what you asked for, or tell you why the server can't do that. Both requests and responses have a header, and optionally a body."
-- "We can make requests and receive responses, as well as see their headers, using `curl`."
+- "Web APIs enable client-server interactions over the internet through a structured exchange of requests and responses, allowing for seamless data retrieval and submission."
+
+- "The Hypertext Transfer Protocol (HTTP) is crucial for Web API operations, outlining how messages are formatted and transmitted, ensuring consistent communication across different platforms."
+
+- "In HTTP, the communication involves requests initiated by clients (with methods like GET, POST) and responses from servers, each containing headers and potentially a body with the relevant data."
+
+- "HTTPS adds a layer of encryption to HTTP, enhancing security by protecting data in transit, making it essential for sensitive transactions."
 ---
 
 As described previously, Web APIs enable communication between different software systems over the web. Typically, a _request_ is made by a client, which could be an application on your local laptop, to the API server that understands and processes the _request_ and retrieves the data requested and sends it back as a _response_ to the client.
