@@ -54,24 +54,29 @@ HTTPS is a protocol closely related to HTTP; it follows many of the same convent
 
 The two main objects in HTTP are the _request_ and the _response_. Each HTTP connection is initiated by sending a request, and is replied to with a response. Both the request and response have a _header_, that defines metadata about what is requested and what is included in the response, and both can also have a _body_, containing data.
 
-An HTTP request typically includes:
+An HTTP _request_ typically includes:
 
--HTTP Method: This indicates the action to be performed on the resource and includes verbs like GET (retrieve data), POST (submit data), PUT (update data), DELETE (remove data), among others.
--Headers: These provide essential information about the request or the client itself, such as content type, authentication details, etc.
--Body: Not present in all types of requests, the body contains data sent by the client to the server, commonly seen in POST or PUT requests.
+- HTTP Method: This indicates the action to be performed on the resource and includes verbs like GET (retrieve data), POST (submit data), PUT (update data), DELETE (remove data), among others.
 
-An HTTP response from a server typically consists of the following key components:
+- Headers: These provide essential information about the request or the client itself, such as content type, authentication details, etc.
 
--Status Line: Includes the HTTP version, a status code, and a status message. The status code is a three-digit number that indicates the outcome of the request, with common codes including:
+- Body: Not present in all types of requests, the body contains data sent by the client to the server, commonly seen in POST or PUT requests.
+
+An HTTP _response_ from a server typically consists of the following key components:
+
+- Status Line: Includes the HTTP version, a status code, and a status message. The status code is a three-digit number that indicates the outcome of the request, with common codes including:
 
 200 OK: The request was successful, and the response body contains the requested data.
 404 Not Found: The requested resource could not be found on the server.
 500 Internal Server Error: A generic error message indicating that something went wrong on the server.
-Headers: Provide metadata about the response, similar to request headers. Important response headers to understand are:
 
--Content-Type: Specifies the type of data in the response body (e.g., application/json, text/html).
--Content-Length: The length of the response body in octets (8-bit bytes).
--Body: Contains the data being sent back to the client. This could be the requested resource, confirmation of an action taken, or an error message. The presence and format of the body depend on the request type and the status code. For example:
+- Headers: Provide metadata about the response, similar to request headers. Important response headers to understand are:
+
+- Content-Type: Specifies the type of data in the response body (e.g., application/json, text/html).
+
+- Content-Length: The length of the response body in octets (8-bit bytes).
+
+- Body: Contains the data being sent back to the client. This could be the requested resource, confirmation of an action taken, or an error message. The presence and format of the body depend on the request type and the status code. For example:
 
 In a GET request for a webpage, the body would contain the HTML of the page.
 In a POST request that submits data (like a form submission), the response body might contain a confirmation message or the details of the created resource.

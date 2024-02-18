@@ -54,6 +54,12 @@ entirely separately, with no memory from one request to the next. This means
 that you must present your authentication credentials with every request you
 make to the API.
 
+
+For the vast majority of APIs, there will exist good developer documentation that provides examples of
+how to use the token or other identifier that they provide to connect to their
+service, including examples.
+
+
 ## Constructing API Queries
 
 ### Reading Documentation
@@ -82,7 +88,7 @@ make to the API.
 
 5. **Construct the Query**: Combine all the above components to construct your full API query. For a GET request, this might look like `curl -H "Authorization: Bearer <token>" https://api.example.com/users/123`.
 
-By combining these components—endpoints, resources, parameters, and headers—you can construct effective API queries to retrive data, submit new information, or perform other operations via the API.
+You can combine endpoints, resources, parameters, and headers to construct effective API queries to retrieve data, submit new information, or perform other operations through the API.
 
 
 ### YouTube
@@ -136,24 +142,15 @@ x-xss-protection: 1; mode=block
 ~~~
 {: .output}
 
-We can see that this API gives us JSON output including a links to two versions
+We can see that this API gives us JSON output including links to two versions
 of the picture of the day, and then metadata about the picture including its
 title, description, and copyright. The headers also give us some information
 about our API usage&mdash;our rate limit is 40 requests per day, and we have
 39 of these remaining.
 
-With all of these ways to provide identification and authentication information,
-we don't have time to cover each possibility exhaustively. For the vast majority
-of APIs, there will exist good developer documentation that provides examples of
-how to use the token or other identifier that they provide to connect to their
-service, including examples.
-
-
-
-
 ## URL Query Strings
 
-Let's break down the given URL Certainly! Let's dissect the given URL `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=5&rettype=fasta` to illustrate various API concepts using this specific example:
+Let's break down the given URL `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=5&rettype=fasta` to illustrate various API concepts using this specific example:
 
 ### Base URL
 
@@ -185,18 +182,16 @@ Combining these components, the full URL `https://eutils.ncbi.nlm.nih.gov/entrez
 
 By sending a request to this URL, you're asking the NCBI E-utilities service to fetch the data for a nucleotide sequence identified by `id=5` from the `nucleotide` database and return it in FASTA format. This is a common task in bioinformatics, where accessing specific genetic sequences efficiently is crucial for research and analysis.
 
-By breaking down this URL, you can see how the different components of an API query—endpoint, resources, and parameters—work together to specify and retrieve data from a web-based API.
-
->## Let’s create a query 
-> Run this query: https://api.weather.gov/stations?limit=3
->1. What do the results show?
->2. What is the Station Identifier for Hawks Rise Elementary?
->3. Write a query that returns all active weather alerts for California. (Hint: Check API doc https://www.weather.gov/documentation/services-web-api)
+## Let’s create a query 
+Run this query: https://api.weather.gov/stations?limit=3
+1. What do the results show?
+2. What is the Station Identifier for Hawks Rise Elementary?
+3. Write a query that returns all active weather alerts for California. (Hint: Check API doc https://www.weather.gov/documentation/services-web-api)
 >
->>## Solution
->>1. Shows 3 currently-active weather stations in New York and includes metadata about each station.
->>2. 0005W
->>3. https://api.weather.gov/alerts/active/area/CA
+>## Solution
+>1. Shows 3 currently-active weather stations in New York and includes metadata about each station.
+>2. 0005W
+>3. https://api.weather.gov/alerts/active/area/CA
 
 >{: .solution}
 {: .challenge}
