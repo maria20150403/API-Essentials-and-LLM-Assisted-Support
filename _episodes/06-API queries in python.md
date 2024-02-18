@@ -22,6 +22,113 @@ keypoints:
 The requests library in Python is a popular and user-friendly HTTP library that simplifies the process of making HTTP requests. It abstracts away much of the complexity involved in sending HTTP requests and handling responses.
 The requests.get function is used to send a GET request to a specified URL.
 
+#### Example of an HTTP request
+Let's make the same request we observed in shell
+```python
+import requests
+
+# URL you want to make the request to
+url = "https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953"
+
+# Making the GET request
+response = requests.get(url)
+
+# Checking if the request was successful
+if response.status_code == 200:
+    # The request was successful; you can now process the response
+    print("Request successful!")
+    # Printing the content of the response; assuming it's text-based like HTML or JSON
+    print(response.text)
+else:
+    # The request failed
+    print(f"Request failed with status code: {response.status_code}")
+
+```
+
+ To structure the HTTP request in a more organized way, especially for complex APIs, you can break down the request into components such as URL, parameters, and headers. This approach enhances readability and maintainability, particularly when dealing with APIs that require authentication, accept various parameters, or depend on specific header values.
+
+### 1. Base URL
+The base URL is the root address of the API endpoint you're accessing.
+
+```python
+base_url = "https://libapp.library.yale.edu/VoySearch/GetBibItem"
+```
+
+### 2. Parameters
+Parameters are often used in GET requests to filter data, specify queries, etc. They are appended to the URL as a query string.
+
+```python
+params = {
+    'isxn': '9780415704953'
+}
+```
+
+### 3. Headers
+Headers can include metadata such as content type, authentication tokens, and other information about the request or the desired response.
+
+```python
+headers = {
+    'Accept': 'application/json',  # Assuming the API returns JSON data
+    # 'Authorization': 'Bearer YOUR_API_KEY',  # Uncomment if you need authentication
+}
+```
+
+### 4. Making the Request
+With the URL, parameters, and headers defined, you can make the request using the `requests` library. The `params` and `headers` arguments in the `requests.get()` method allow you to pass the parameters and headers defined earlier.
+
+```python
+import requests
+
+response = requests.get(base_url, params=params, headers=headers)
+```
+
+### 5. Checking the Response and Handling Data
+After making the request, check the response status and handle the data accordingly.
+
+```python
+if response.status_code == 200:
+    # The request was successful; handle the data
+    data = response.json()  # Parse JSON response
+    print(data)
+else:
+    # Handle errors (e.g., display a message or log the error)
+    print(f"Request failed with status code: {response.status_code}")
+```
+
+### Example Use Case
+This structured approach is particularly useful in scenarios where you might need to modify only one aspect of the request, such as changing a parameter or adding an authentication token to the headers. It keeps the request flexible and your code clean.
+
+```python
+import requests
+
+# Base URL of the API endpoint
+base_url = "https://libapp.library.yale.edu/VoySearch/GetBibItem"
+
+# Parameters to be sent with the request
+params = {
+    'isxn': '9780415704953'
+}
+
+# Headers for the request
+headers = {
+    'Accept': 'application/json'  # Assuming you expect a JSON response
+    # 'Authorization': 'Bearer YOUR_API_KEY'  # Uncomment and replace if authentication is required
+}
+
+# Making the GET request
+response = requests.get(base_url, params=params, headers=headers)
+
+# Checking the response status and handling the data
+if response.status_code == 200:
+    # Request was successful, process the data
+    data = response.json()  # Parsing the response as JSON
+    print("Data received from the API:")
+    print(data)
+else:
+    # Handling request errors
+    print(f"Request failed with status code: {response.status_code}")
+```
+
 - **`json`**:
 One of the primary uses of the `json` module is to parse JSON data received from an API into Python dictionaries, allowing for easy access and manipulation of the data within a Python program. JSON is easy for humans to read and write and easy for machines to parse and generate.
 
@@ -63,7 +170,7 @@ data_dict = {
 
 json_data = json.dumps(data_dict,indent=4, sort_keys=True)
 
-print(json_data)  # Output: '{"name": "Jane", "age": 25, "city": "Los Angeles"}'
+print(json_data) 
 ```
 ## API keys
 

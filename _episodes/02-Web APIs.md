@@ -1,5 +1,5 @@
 ---
-title: "Web APIs?"
+title: "Web APIs"
 teaching: 15
 exercises: 5
 questions:

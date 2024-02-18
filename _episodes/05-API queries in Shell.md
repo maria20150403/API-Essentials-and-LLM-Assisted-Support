@@ -32,10 +32,10 @@ In this lesson we will use `curl` command for interacting with our API endpoints
 A tool for transferring data via URL, the `curl  ` command allows use to interact with API endpoints from the command line.  A full-featured tool, the `curl` command  has built-in functionality to work with *most* types of API endpoint and authentication schemes. The full manual of usage options are available on the command line by entering `man curl`
  
 
-Using the NCBI E-Utilities API, we enter the command `curl` followed by the URL for the Bibliographic item with the ISBN 9780415704953 
+Using the Voyager API, we enter the command `curl` followed by the URL for the Bibliographic item with the ISBN 9780415704953 
 
 ~~~
-$ curl "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=5&rettype=fasta"
+$ curl "https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953"
 ~~~
 {: .bash}
 ~~~
@@ -60,14 +60,14 @@ $ curl "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&
 The API response can be written to a file using the angled bracket `>` followed by a file name:
 
 ~~~
-$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 > file.txt
+$ curl "https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953" > file.txt
 ~~~
 {: .bash}
 
 Alternatively, the output can be piped to another command for further action:
 
 ~~~
-$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953 | wc -l
+$ curl "https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953" | wc -l
 ~~~
 {: .bash}
 
@@ -86,7 +86,7 @@ The `jq` command transforms JSON content through selection and filtering.  Using
 Be default, the JSON returned in most API calls has the white-space removed, while this is more efficient for transfer and makes no operational difference, it makes the data difficult for humans to read.  The `jq` tool can be used to pretty-print, or format the JSON in a human-readable way, using the `.` command.
 
 ~~~
-$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.'
+$ curl "https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953"  | jq '.'
 ~~~
 {: .bash}
 ~~~
@@ -148,7 +148,7 @@ Since the Voyager API JSON response begins with the root "record" key, with use 
 
 We can specific multiple keys in a single filter, In this example, we return the title and author by specified both keys, separated by a comma.
 ~~~
-$ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  | jq '.record[].title, .record[].author'
+$ curl "https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953"  | jq '.record[].title, .record[].author'
 
 ~~~
 {: .bash}
@@ -164,7 +164,7 @@ $ curl https://libapp.library.yale.edu/VoySearch/GetBibItem?isxn=9780415704953  
 
 
 ~~~
-$ curl https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953 
+$ curl "https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953" 
 ~~~
 {: .bash}
 ~~~
@@ -178,7 +178,7 @@ Converting response from Voyager API to text, select element
 #### Pretty-print with `xmlstarlet`
 
 ~~~
-$ curl -s https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953 | xmlstarlet format --indent-tab
+$ curl -s "https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953" | xmlstarlet format --indent-tab
 
 ~~~
 {: .bash}
@@ -296,7 +296,7 @@ In this example, we return just the subject headings from the MARCXML record:
 
 
 ~~~
-$ curl -s https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953 | xmlstarlet  sel -t -v '//*[@tag="650"]//text()' 
+$ curl -s "https://libapp.library.yale.edu/VoySearch/GetBibMarc?isxn=9780415704953" | xmlstarlet  sel -t -v '//*[@tag="650"]//text()' 
 ~~~
 {: .bash}
 
