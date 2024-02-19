@@ -23,18 +23,16 @@ However, LLMs do not have real-time access to external databases or the internet
 
 Hence, their responses should be taken with caution and it is always best to consult the official API documentation for the most accurate and up-to-date information.
 
-## Metacognitive Strategies
-In line with best practices while collaborating with LLMs, keep a check on your thinking process so that you have better control of it and don't fall prey to cognitive biases that maybe triggered due to the collaboration. Remember to Plan, Monitor and Evaluate your thinking.
-
 ## Query Construction
-One of the ways LLMs like ChatGPT can help you is by constructing queries based on your requirement. However, receiving a perfect API query from ChatGPT depends on its familiarity with the API. Remember, always keep in mind that the response of an Artificially Intelligent agent should be interpreted in the context of its training data.
+One of the ways LLMs like ChatGPT can help you is by constructing queries based on your requirement. However, receiving a perfect API query from ChatGPT depends on its familiarity with the API. However, always keep in mind that the response of an Artificially Intelligent agent should be interpreted in the context of its training data.
 
 As a strategy, ask the LLM to construct a simple API query and check against the API documentation. If successful, try to gauge its familiarity with a more complex query. Let's try it out!
 
-
->Let's explore the National Center for Biotechnology Information (NCBI) E-utilities API.
->- Documentation: [https://www.ncbi.nlm.nih.gov/books/NBK25499/](https://www.ncbi.nlm.nih.gov/books/NBK25499/)
+>## National Center for Biotechnology Information (NCBI) E-utilities API.
+> Let's explore the E-utilities documentation: [https://www.ncbi.nlm.nih.gov/books/NBK25499/](https://www.ncbi.nlm.nih.gov/books/NBK25499/)
 > Using this API, create an API query to 
+>
+>>## Solution
 >>```python
 >>import requests
 >>import json
