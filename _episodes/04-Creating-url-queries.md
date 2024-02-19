@@ -182,16 +182,16 @@ Combining these components, the full URL `https://eutils.ncbi.nlm.nih.gov/entrez
 
 By sending a request to this URL, you're asking the NCBI E-utilities service to fetch the data for a nucleotide sequence identified by `id=5` from the `nucleotide` database and return it in FASTA format. This is a common task in bioinformatics, where accessing specific genetic sequences efficiently is crucial for research and analysis.
 
-## Let’s create a query 
-Run this query: https://api.weather.gov/stations?limit=3
-1. What do the results show?
-2. What is the Station Identifier for Hawks Rise Elementary?
-3. Write a query that returns all active weather alerts for California. (Hint: Check API doc https://www.weather.gov/documentation/services-web-api)
->
->## Solution
->1. Shows 3 currently-active weather stations in New York and includes metadata about each station.
->2. 0005W
->3. https://api.weather.gov/alerts/active/area/CA
+>## Let’s create a query 
+>Run this query: https://api.weather.gov/stations?limit=3
+>1. What do the results show?
+>2. What is the Station Identifier for Hawks Rise Elementary?
+>3. Write a query that returns all active weather alerts for California. (Hint: Check API doc https://www.weather.gov/documentation/services-web-api)
+>>
+>>## Solution
+>>1. Shows 3 currently-active weather stations in New York and includes metadata about each station.
+>>2. 0005W
+>>3. https://api.weather.gov/alerts/active/area/CA
 
 >{: .solution}
 {: .challenge}
