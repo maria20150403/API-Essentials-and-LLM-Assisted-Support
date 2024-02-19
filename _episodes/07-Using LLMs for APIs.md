@@ -37,7 +37,7 @@ As a strategy, ask the LLM to construct a simple API query and check against the
 >>import requests
 >>import json
 >>```
->{ .solution}
+>>{ .solution}
 {: .challenge}
 
 ## Help Understanding API Documentation
